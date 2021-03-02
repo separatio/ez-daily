@@ -1,9 +1,11 @@
 //Offer multiple ways of selecting standup candidates:
 //- in the order provided
-//- alphabetically
 //- reverse alphabetically
 
-const array = [1, 2, 3, 4, 5];
+const array1 = ['Alex', 'Ben', 'Zuri', 'Mihnea', 'Rox', 'Hera', "Piutz"];
+const array2 = ['Alex', 'Ben', 'Zuri', 'Mihnea', 'Rox', 'Hera', "Piutz"];
+const array3 = ['Alex', 'Ben', 'Zuri', 'Mihnea', 'Rox', 'Hera', "Piutz"];
+const array4 = ['Alex', 'Ben', 'Zuri', 'Mihnea', 'Rox', 'Hera', "Piutz"];
 
 //- random - using Durstenfeld shuffle algorithm
 
@@ -15,9 +17,19 @@ const randomSort = (array) => {
   return array;
 }
 
+//- alphabetically
+
+const alphabeticallySort = (array) => {
+  return array.sort();
+}
+
 const showSort = () => {
   return(
-    <div>{randomSort(array)}</div>
+    <div>
+    {randomSort(array1)}
+    <br />
+    {alphabeticallySort(array2)}
+    </div>
   )
 }
 
