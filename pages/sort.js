@@ -1,6 +1,5 @@
 //Offer multiple ways of selecting standup candidates:
 //- in the order provided
-//- reverse alphabetically
 
 const array1 = ['Alex', 'Ben', 'Zuri', 'Mihnea', 'Rox', 'Hera', "Piutz"];
 const array2 = ['Alex', 'Ben', 'Zuri', 'Mihnea', 'Rox', 'Hera', "Piutz"];
@@ -23,12 +22,20 @@ const alphabeticallySort = (array) => {
   return array.sort();
 }
 
+//- reverse alphabetically
+
+const reverseAlphabeticallySort = (array) => {
+  return array.sort().reverse();
+}
+
 const showSort = () => {
   return(
     <div>
-    {randomSort(array1)}
-    <br />
-    {alphabeticallySort(array2)}
+      {randomSort(array1)}
+      <br />
+      {alphabeticallySort(array2)}
+      <br />
+      {reverseAlphabeticallySort(array3)}
     </div>
   )
 }
