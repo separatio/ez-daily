@@ -5,85 +5,81 @@ export default function Home() {
   return (
     <Container className="md-container">
       <Head>
-        <title>ReactJS with react-bootstrap</title>
-        <link rel="icon" href="/favicon-32x32.png" />
+        <title>Daily Roulette</title>
       </Head>
       <Container>
         <h1>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to the Daily Roulette!
         </h1>
-        <p>
-          Get started by editing <code>pages/index.js</code>
-        </p>
+        <p>Please select your preferred update sharing presentation order:</p>
         <Container>
           <Row className="justify-content-md-between">
-            <Card className="sml-card">
-              <Card.Body>
-                <Card.Title>Documentation</Card.Title>
-                <Card.Text>
-                  Find in-depth information about Next.js features and API.
-                </Card.Text>
-                <Button variant="primary" href="https://nextjs.org/docs">
-                  More &rarr;
-                </Button>
-              </Card.Body>
-            </Card>
-            <Card className="sml-card">
-              <Card.Body>
-                <Card.Title>Learn</Card.Title>
-                <Card.Text>
-                  Learn about Next.js in an interactive course with quizzes!
-                </Card.Text>
-                <Button variant="primary" href="https://nextjs.org/learn">
-                  More &rarr;
-                </Button>
-              </Card.Body>
-            </Card>
+            <a href="http://localhost:3000">
+              <Card className="sml-card">
+                <Card.Body>
+                  <Card.Title>Random</Card.Title>
+                  <Card.Text>
+                    Your team members, in Random order!
+                  </Card.Text>
+                  {/* <Button variant="primary" href="https://nextjs.org/docs">
+                    More &rarr;
+                  </Button> */}
+                </Card.Body>
+              </Card>
+            </a>
+            <a href="http://localhost:3000">
+              <Card className="sml-card">
+                <Card.Body>
+                  <Card.Title>As-is</Card.Title>
+                  <Card.Text>
+                    Use a custom order for the team members!
+                  </Card.Text>
+                  {/* <Button variant="primary" href="https://nextjs.org/learn">
+                    More &rarr;
+                  </Button> */}
+                </Card.Body>
+              </Card>
+            </a>
           </Row>
           <Row className="justify-content-md-between">
-            <Card className="sml-card">
-              <Card.Body>
-                <Card.Title>Examples</Card.Title>
-                <Card.Text>
-                  Discover and deploy boilerplate example Next.js projects.
-                </Card.Text>
-                <Button
-                  variant="primary"
-                  href="https://github.com/vercel/next.js/tree/master/examples"
-                >
-                  More &rarr;
-                </Button>
-              </Card.Body>
-            </Card>
-            <Card className="sml-card">
-              <Card.Body>
-                <Card.Title>Deploy</Card.Title>
-                <Card.Text>
-                  Instantly deploy your Next.js site to a public URL with
-                  Vercel.
-                </Card.Text>
-                <Button
-                  variant="primary"
-                  href="https://vercel.com/new?utm_source=github&utm_medium=example&utm_campaign=next-example"
-                >
-                  More &rarr;
-                </Button>
-              </Card.Body>
-            </Card>
+            <a href="http://localhost:3000">
+              <Card className="sml-card">
+                <Card.Body>
+                  <Card.Title>Alphabetical</Card.Title>
+                  <Card.Text>
+                    This is self-explanatory, right?
+                  </Card.Text>
+                  {/* <Button
+                    variant="primary"
+                    href="https://github.com/vercel/next.js/tree/master/examples"
+                  >
+                    More &rarr;
+                  </Button> */}
+                </Card.Body>
+              </Card>
+            </a>
+
+            <a href="http://localhost:3000">
+              <Card className="sml-card">
+                <Card.Body>
+                  <Card.Title>Reverse Alphabetical</Card.Title>
+                  <Card.Text>
+                    Play the Roulette in Reverse!
+                  </Card.Text>
+                  {/* <Button
+                    variant="primary"
+                    href="https://vercel.com/new?utm_source=github&utm_medium=example&utm_campaign=next-example"
+                  >
+                    More &rarr;
+                  </Button> */}
+                </Card.Body>
+              </Card>
+            </a>
           </Row>
         </Container>
       </Container>
 
-      <footer className="cntr-footer">
-        <a
-          href="https://vercel.com?filter=next.js&utm_source=github&utm_medium=example&utm_campaign=next-example"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="sml-logo" />
-        </a>
-      </footer>
+      <footer className="cntr-footer"></footer>
     </Container>
   )
 }
