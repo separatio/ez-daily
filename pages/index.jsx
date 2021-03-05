@@ -3,16 +3,17 @@ import { Container, Row, Card, Button } from 'react-bootstrap'
 
 export default function Home() {
   return (
-    <Container className="md-container">
+    <Container fluid className="page">
       <Head>
         <title>Daily Roulette</title>
       </Head>
-      <Container>
-        <h1>
+      <Container fluid className="header">
+        <h1 className="title">
           Welcome to the Daily Roulette!
-        </h1>
-        <p>Please select your preferred update sharing presentation order:</p>
-        <Container>
+          </h1>
+          <p className="subtitle">Please select your preferred update sharing presentation order:</p>
+      </Container>
+      <Container className="content">
           <Row className="justify-content-md-between">
             <a href="http://localhost:3000">
               <Card className="sml-card">
@@ -76,7 +77,6 @@ export default function Home() {
               </Card>
             </a>
           </Row>
-        </Container>
       </Container>
 
       <footer className="cntr-footer"></footer>
