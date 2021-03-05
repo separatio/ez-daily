@@ -1,14 +1,35 @@
 /* ensure all pages have Bootstrap CSS */
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
-.md-container {
+.title, .subtitle {
+  color: #2E77AE;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.header {
+  text-align: center;
+  background-color: #E0EAF5;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.content {
   max-width: 800px;
   padding-top: 2rem;
 }
 
 .sml-card {
+  background-color: #2E77AE;
+  color: #E0EAF5;
   width: 22rem;
   margin: 1rem 0;
+}
+
+.sml-card:hover {
+  background-color: #0D2137;
 }
 
 .cntr-footer {
