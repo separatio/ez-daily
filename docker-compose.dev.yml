@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+ notes:
+  build:
+   context: .
+   dockerfile: Dockerfile.dev
+  ports:
+   - 3000:3000
+  environment:
+   - SERVER_PORT=3000
+   - CONNECTIONSTRING=mongodb://mongo:27017/notes
+  volumes:
+   - ./:/app
+  command: yarn dev
+
+ mongo:
+  image: mongo:4.4.4
+  ports:
+   - 27017:27017
+  volumes:
+   - mongodb:/data/db
+   - mongodb_config:/data/configdb
+volumes:
+ mongodb:
+ mongodb_config:
