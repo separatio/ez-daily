@@ -1,5 +1,5 @@
 import '../style/index.css'
 
-export default function MyApp({ Component, pageProps }) {
+export default function DailyFacilitator({ Component, pageProps }) {
   return <Component {...pageProps} />
 }

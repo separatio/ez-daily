@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <Container fluid className="page">
       <Head>
-        <title>Daily Roulette</title>
+        <title>Daily Facilitator</title>
       </Head>
       <Container fluid className="header">
         <h1 className="title">
@@ -18,7 +18,7 @@ export default function Home() {
             <a href="http://localhost:3000">
               <Card className="sml-card">
                 <Card.Body>
-                  <Card.Title>Random</Card.Title>
+                  <Card.Title>Roulette</Card.Title>
                   <Card.Text>
                     Your team members, in Random order!
                   </Card.Text>
