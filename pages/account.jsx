@@ -1,7 +1,5 @@
 import Header from '../components/Header'
 import { Container, Row, Button } from 'react-bootstrap'
-import SignIn from '../components/account/SignIn'
-import SignUp from '../components/account/SignUp'
 
 export default function Account() {
   return (
@@ -10,8 +8,11 @@ export default function Account() {
 
       <Container className="content">
           <Row className="justify-content-md-between">
+            {/*
+            The account page will be left empty up until
+            login with Gmail and Github will be implemented
             <SignIn />
-            <SignUp />
+            <SignUp /> */}
           </Row>
       </Container>
 
