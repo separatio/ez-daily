@@ -1,18 +1,11 @@
-import Head from 'next/head'
+import Header from '../components/Header'
 import { Container, Row, Card, Button } from 'react-bootstrap'
 
-export default function Home() {
+const Home = () => {
   return (
     <Container fluid className="page">
-      <Head>
-        <title>Daily Facilitator</title>
-      </Head>
-      <Container fluid className="header">
-        <h1 className="title">
-          Welcome to the Daily Roulette!
-          </h1>
-          <p className="subtitle">Please select your preferred update sharing presentation order:</p>
-      </Container>
+      <Header />
+
       <Container className="content">
           <Row className="justify-content-md-between">
             <a href="http://localhost:3000">
@@ -83,3 +76,5 @@ export default function Home() {
     </Container>
   )
 }
+
+export default Home
