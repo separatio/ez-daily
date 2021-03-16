@@ -1,22 +1,19 @@
-import Header from '../components/Header'
-import { Container, Row, Button } from 'react-bootstrap'
+import Header from '../components/Header';
+import {Container, Row} from 'react-bootstrap';
 
 export default function Account() {
   return (
-    <Container fluid className="page">
+    <Container
+      fluid
+      className="page"
+    >
       <Header />
 
       <Container className="content">
-          <Row className="justify-content-md-between">
-            {/*
-            The account page will be left empty up until
-            login with Gmail and Github will be implemented
-            <SignIn />
-            <SignUp /> */}
-          </Row>
+        <Row className="justify-content-md-between" />
       </Container>
 
-      <footer className="cntr-footer"></footer>
+      <footer className="cntr-footer" />
     </Container>
-  )
+  );
 }
