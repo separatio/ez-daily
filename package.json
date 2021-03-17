@@ -11,28 +11,20 @@
     "lint": "eslint '**/*.jsx'"
   },
   "dependencies": {
-    "@popperjs/core": "^2.9.1",
     "@prisma/client": "2.18.0",
     "bootstrap": "^4.6.0",
     "jquery": "^3.6.0",
     "next": "^10.0.7",
     "next-auth": "3.11.2",
-    "prop-types": "^15.7.2",
+    "popper.js": "^1.16.1",
     "react": "^17.0.1",
     "react-bootstrap": "^1.5.1",
-    "react-dom": "^17.0.1",
-    "react-markdown": "5.0.3"
+    "react-dom": "^17.0.1"
   },
   "devDependencies": {
-    "@types/next-auth": "^3.7.0",
-    "@types/node": "14.14.32",
-    "@types/react": "17.0.3",
-    "@typescript-eslint/eslint-plugin": "^4.18.0",
-    "@typescript-eslint/parser": "^4.18.0",
     "eslint": "^7.22.0",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-react": "^7.22.0",
-    "prisma": "2.18.0",
-    "typescript": "4.2.3"
+    "prisma": "2.18.0"
   }
 }

@@ -5,8 +5,7 @@ env:
 extends:
   - 'eslint:recommended'
   - 'plugin:react/recommended'
-  # - google
-parser: '@typescript-eslint/parser'
+  - google
 parserOptions:
   ecmaFeatures:
     jsx: true
@@ -14,12 +13,7 @@ parserOptions:
   sourceType: module
 plugins:
   - react
-  - '@typescript-eslint'
-rules: {
-  "react/react-in-jsx-scope": "off",
-  "require-jsdoc": "off",
-  "react/prop-types": "off"
-}
+rules: {}
 settings:
   react: {
     version: detect
