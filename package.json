@@ -7,12 +7,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "docker": "docker-compose -f docker-compose.dev.yml up --build"
+    "docker": "docker-compose -f docker-compose.dev.yml up --build",
+    "lint": "eslint '**/*.jsx'"
   },
   "dependencies": {
+    "@popperjs/core": "^2.9.1",
     "@prisma/client": "2.18.0",
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.6.0",
     "next": "^10.0.7",
     "next-auth": "3.11.2",
+    "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-bootstrap": "^1.5.1",
     "react-dom": "^17.0.1",

@@ -1,7 +1,7 @@
 import Header from '../components/Header';
 import {Container, Row, Card} from 'react-bootstrap';
 
-function Home() {
+export default function Page() {
   return (
     <Container
       fluid
@@ -97,5 +97,3 @@ function Home() {
     </Container>
   );
 }
-
-export default Home;

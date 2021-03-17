@@ -1,7 +1,7 @@
 import Header from '../components/Header';
 import {Container, Row} from 'react-bootstrap';
 
-export default function Account() {
+export default function Page() {
   return (
     <Container
       fluid
