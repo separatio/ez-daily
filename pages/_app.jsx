@@ -1,8 +1,7 @@
 import '../style/index.css'
 import { Provider } from "next-auth/client";
-import { AppProps } from "next/app";
 
-const DailyFacilitator = ({ Component, pageProps }: AppProps) => {
+const DailyFacilitator = ({ Component, pageProps }) => {
   return (
     <Provider session={pageProps.session}>
       <Component {...pageProps} />
