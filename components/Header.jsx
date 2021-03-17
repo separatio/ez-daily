@@ -4,6 +4,21 @@ import styles from '../style/Header.module.css';
 import Head from 'next/head';
 import {Container} from 'react-bootstrap';
 
+const homeHeader = () => {
+  return (<Container
+    fluid
+    className="header"
+  >
+    <h1 className="title">
+        Welcome to the Daily Roulette!
+    </h1>
+
+    <p className="subtitle">
+        Please select your preferred update sharing presentation order:
+    </p>
+  </Container>);
+};
+
 export default function Header({
   title = 'Daily Facilitator',
 }) {
@@ -17,18 +32,7 @@ export default function Header({
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      <Container
-        fluid
-        className="header"
-      >
-        <h1 className="title">
-            Welcome to the Daily Roulette!
-        </h1>
-
-        <p className="subtitle">
-            Please select your preferred update sharing presentation order:
-        </p>
-      </Container>
+      {homeHeader()}
 
       <noscript>
         <style>{`.nojs-show { opacity: 1; top: 0; }`}</style>
@@ -70,6 +74,7 @@ export default function Header({
       <nav>
         <ul className={styles.navItems}>
           <li className={styles.navItem}><Link href="/"><a>Home</a></Link></li>
+          <li className={styles.navItem}><Link href="/pricing"><a>Pricing</a></Link></li>
         </ul>
       </nav>
     </header>

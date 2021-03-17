@@ -1,0 +1,43 @@
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px 1px #ddd;
+  margin-bottom: 1rem;
+	max-width: 300px;
+  padding: 1rem 0;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.free {
+  border-top: 6px solid #1abc9c;
+}
+
+.basic {
+  border-top: 6px solid #3498db;
+}
+
+.medium {
+  border-top: 6px solid #9b59b6;
+}
+
+.pro {
+  border-top: 6px solid #f1c40f;
+}
+
+.btnbasic {
+  border: none;
+  background-color: #3498db;
+}
+
+.btnmedium {
+  border: none;
+  background-color: #9b59b6;
+}
+
+.btnpro {
+  border: none;
+  background-color: #f1c40f;
+}
