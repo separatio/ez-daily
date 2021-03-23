@@ -1,6 +1,6 @@
-import Layout from '../components/Layout'
+import Layout from '../components/Layout';
 
-export default function Page () {
+export default function Page() {
   return (
     <Layout>
       <h1>Client Side Rendering</h1>
@@ -18,5 +18,5 @@ export default function Page () {
         The disadvantage of <strong>useSession()</strong> is that it requires client side JavaScript.
       </p>
     </Layout>
-  )
+  );
 }
