@@ -2,7 +2,7 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
 .title, .subtitle {
-  color: #2E77AE;
+  color: #EEE;
 }
 
 a:hover {
@@ -11,7 +11,7 @@ a:hover {
 
 .header {
   text-align: center;
-  background-color: #E0EAF5;
+  background-color: #3498db;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -22,8 +22,8 @@ a:hover {
 }
 
 .sml-card {
-  background-color: #2E77AE;
-  color: #E0EAF5;
+  background-color: #3498db;
+  color: #EEE;
   width: 22rem;
   margin: 1rem 0;
 }

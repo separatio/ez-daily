@@ -1,14 +1,9 @@
-import Header from '../components/Header';
+import Layout from '../components/Layout';
 import {Container, Row, Card} from 'react-bootstrap';
 
 export default function Page() {
   return (
-    <Container
-      fluid
-      className="page"
-    >
-      <Header />
-
+    <Layout>
       <Container className="content">
         <Row className="justify-content-md-between">
           <a href="http://localhost:3000">
@@ -94,6 +89,6 @@ export default function Page() {
       </Container>
 
       <footer className="cntr-footer" />
-    </Container>
+    </Layout>
   );
 }
