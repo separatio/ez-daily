@@ -11,11 +11,6 @@ export default NextAuth({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
-    Providers.Atlassian({
-      clientId: process.env.ATLASSIAN_CLIENT_ID,
-      clientSecret: process.env.ATLASSIAN_CLIENT_SECRET,
-      scope: 'write:jira-work read:jira-work read:jira-user offline_access read:me',
-    }),
   ],
   pages: {
     signIn: '/signin',
