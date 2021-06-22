@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import {signIn, signOut, useSession} from 'next-auth/client';
 import styles from '../style/Header.module.css';
 import Head from 'next/head';
@@ -12,10 +11,6 @@ const homeHeader = () => {
     <h1 className="title">
         Welcome to the Daily Roulette!
     </h1>
-
-    <p className="subtitle">
-        Please select your preferred update sharing presentation order:
-    </p>
   </Container>);
 };
 
@@ -71,11 +66,6 @@ export default function Header({
           </>}
         </p>
       </div>
-      {/* <nav>
-        <ul className={styles.navItems}>
-          <li className={styles.navItem}><Link href="/"><a>Home</a></Link></li>
-        </ul>
-      </nav> */}
     </header>
   );
 }

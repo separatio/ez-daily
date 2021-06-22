@@ -36,3 +36,13 @@ a:hover {
   height: 1em;
   margin-left: 10px;
 }
+
+#__next {
+  height:100vh;
+}
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
