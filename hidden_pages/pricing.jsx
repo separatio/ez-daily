@@ -125,34 +125,6 @@ export default function Page() {
         </div>
 
         <Pricing />
-        {/* <PricingCard />
-
-          <div className="col">
-            <div className={`mb-4 shadow-sm ${styles.card, styles.medium}`}>
-              <div className="card-header">
-                <h4 className="my-0 fw-normal">Medium</h4>
-              </div>
-              <div className="card-body">
-                <h1 className="card-title pricing-card-title">$15 <small className="text-muted">/ mo</small></h1>
-                <CardFeatures features={['asd']}/>
-                <button type="button" className={`w-100 btn btn-lg btn-primary ${styles.btnmedium}`}>Get started</button>
-              </div>
-            </div>
-          </div>
-
-          <div className="col">
-            <div className={`mb-4 shadow-sm ${styles.card, styles.pro}`}>
-              <div className="card-header">
-                <h4 className="my-0 fw-normal">Pro</h4>
-              </div>
-              <div className="card-body">
-                <h1 className="card-title pricing-card-title">$29 <small className="text-muted">/ mo</small></h1>
-                <CardFeatures features={['asd']}/>
-                <button type="button" className={`w-100 btn btn-lg btn-primary ${styles.btnpro}`}>Get started</button>
-              </div>
-            </div>
-          </div> */}
-        {/* </div> */}
       </Container>
     </Layout>
   );
