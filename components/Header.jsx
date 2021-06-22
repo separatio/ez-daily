@@ -71,12 +71,11 @@ export default function Header({
           </>}
         </p>
       </div>
-      <nav>
+      {/* <nav>
         <ul className={styles.navItems}>
           <li className={styles.navItem}><Link href="/"><a>Home</a></Link></li>
-          <li className={styles.navItem}><Link href="/pricing"><a>Pricing</a></Link></li>
         </ul>
-      </nav>
+      </nav> */}
     </header>
   );
 }
