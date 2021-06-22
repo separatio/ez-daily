@@ -87,8 +87,6 @@ export default function Page() {
           </a>
         </Row>
       </Container>
-
-      <footer className="cntr-footer" />
     </Layout>
   );
 }
