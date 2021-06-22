@@ -12,8 +12,6 @@ export default function Page() {
       <Container className="content">
         <Row className="justify-content-md-between" />
       </Container>
-
-      <footer className="cntr-footer" />
     </Container>
   );
 }
