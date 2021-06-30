@@ -1,17 +1,15 @@
 import Header from '../components/Header';
-import {Container, Row} from 'react-bootstrap';
 
 export default function Page() {
   return (
-    <Container
-      fluid
+    <div
       className="page"
     >
       <Header />
 
-      <Container className="content">
+      <div className="content">
         <Row className="justify-content-md-between" />
-      </Container>
-    </Container>
+      </div>
+    </div>
   );
 }

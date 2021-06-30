@@ -1,5 +1,4 @@
 import styles from '../style/Pricing.module.css';
-import {Container, Button} from 'react-bootstrap';
 import Layout from '../components/Layout';
 
 const cardsData = [

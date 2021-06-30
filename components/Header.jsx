@@ -1,17 +1,16 @@
 import {signIn, signOut, useSession} from 'next-auth/client';
 import styles from '../style/Header.module.css';
 import Head from 'next/head';
-import {Container} from 'react-bootstrap';
 
 const homeHeader = () => {
-  return (<Container
+  return (<div
     fluid
-    className="header"
+    className="container header"
   >
     <h1 className="title">
         Welcome to the Daily Roulette!
     </h1>
-  </Container>);
+  </div>);
 };
 
 export default function Header({
