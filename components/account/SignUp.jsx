@@ -1,7 +1,5 @@
 // Keeping this page as a future reference at the moment
 
-import {Accordion, Card, Button} from 'react-bootstrap';
-
 function SignUpForm() {
   return (
     <Accordion>
