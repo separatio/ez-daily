@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "docker": "docker-compose -f docker-compose.dev.yml up --build",
-    "lint": "eslint '**/*.{js,jsx}'"
+    "lint": "next lint"
   },
   "dependencies": {
     "@popperjs/core": "^2.9.2",
@@ -22,6 +22,7 @@
   "devDependencies": {
     "eslint": "^7.22.0",
     "eslint-config-google": "^0.14.0",
+    "eslint-config-next": "^11.0.1",
     "eslint-plugin-react": "^7.22.0",
     "prisma": "^2.24.1"
   }
