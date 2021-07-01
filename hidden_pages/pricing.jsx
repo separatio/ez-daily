@@ -50,9 +50,9 @@ const CardFeatures = ({features}) => {
 
 const PricingCardAction = ({button}) => {
   return (
-    <Button variant="primary" className={`w-100 btn btn-lg ${button}`}>
+    <button className={`primary w-100 btn btn-lg ${button}`}>
     Get Started
-    </Button>
+    </button>
   );
 };
 
@@ -117,14 +117,14 @@ const Pricing = () => {
 export default function Page() {
   return (
     <Layout>
-      <Container fluid className="page">
+      <div className="container-fluid page">
         <div className="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
           <h1 className="display-4">Pricing</h1>
           <p className="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>
         </div>
 
         <Pricing />
-      </Container>
+      </div>
     </Layout>
   );
 }
