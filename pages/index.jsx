@@ -3,67 +3,67 @@ import Layout from '../components/Layout';
 export default function Page() {
   return (
     <Layout>
-      {/* <Container className="content">
+      <div className="container content">
         <div className="row justify-content-md-between">
           <a href="http://localhost:3000">
-            <Card className="sml-card">
-              <Card.Body>
-                <Card.Title>
+            <div className="sml-card">
+              <div className='card-body'>
+                <div className='card-title'>
                     Roulette
-                </Card.Title>
+                </div>
 
-                <Card.Text>
+                <div className='card-text'>
                         Your team members, in Random order!
-                </Card.Text>
-              </Card.Body>
-            </Card>
+                </div>
+              </div>
+            </div>
           </a>
 
           <a href="http://localhost:3000">
-            <Card className="sml-card">
-              <Card.Body>
-                <Card.Title>
+            <div className="sml-card">
+              <div className='card-body'>
+                <div className='card-title'>
                     As-is
-                </Card.Title>
+                </div>
 
-                <Card.Text>
+                <div className='card-text'>
                         Use a custom order for the team members!
-                </Card.Text>
-              </Card.Body>
-            </Card>
+                </div>
+              </div>
+            </div>
           </a>
         </div>
 
         <div className="row justify-content-md-between">
           <a href="http://localhost:3000">
-            <Card className="sml-card">
-              <Card.Body>
-                <Card.Title>
+            <div className="sml-card">
+              <div className='card-body'>
+                <div className='card-title'>
                     Alphabetical
-                </Card.Title>
+                </div>
 
-                <Card.Text>
+                <div className='card-text'>
                         This is self-explanatory, right?
-                </Card.Text>
-              </Card.Body>
-            </Card>
+                </div>
+              </div>
+            </div>
           </a>
 
           <a href="http://localhost:3000">
-            <Card className="sml-card">
-              <Card.Body>
-                <Card.Title>
+            <div className="sml-card">
+              <div className='card-body'>
+                <div className='card-title'>
                     Reverse Alphabetical
-                </Card.Title>
+                </div>
 
-                <Card.Text>
+                <div className='card-text'>
                         Play the Roulette in Reverse!
-                </Card.Text>
-              </Card.Body>
-            </Card>
+                </div>
+              </div>
+            </div>
           </a>
         </div>
-      </Container> */}
+      </div>
     </Layout>
   );
 }
