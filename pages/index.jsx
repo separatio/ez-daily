@@ -4,64 +4,59 @@ export default function Page() {
   return (
     <Layout>
       <div className="container content">
-        <div className="row justify-content-md-between">
-          <a href="http://localhost:3000">
+        <div className="row row-cols-1 row-cols-md-2">
+          <div className="col mb-4">
             <div className="sml-card">
               <div className='card-body'>
-                <div className='card-title'>
+                <h5 className='card-title'>
                     Roulette
-                </div>
-
+                </h5>
                 <div className='card-text'>
                         Your team members, in Random order!
                 </div>
               </div>
             </div>
-          </a>
+          </div>
 
-          <a href="http://localhost:3000">
+          <div className="col mb-4">
             <div className="sml-card">
               <div className='card-body'>
-                <div className='card-title'>
+                <h5 className='card-title'>
                     As-is
-                </div>
-
+                </h5>
                 <div className='card-text'>
                         Use a custom order for the team members!
                 </div>
               </div>
             </div>
-          </a>
-        </div>
+          </div>
 
-        <div className="row justify-content-md-between">
-          <a href="http://localhost:3000">
+          <div className="col mb-4">
             <div className="sml-card">
               <div className='card-body'>
-                <div className='card-title'>
+                <h5 className='card-title'>
                     Alphabetical
-                </div>
-
+                </h5>
                 <div className='card-text'>
                         This is self-explanatory, right?
                 </div>
               </div>
             </div>
-          </a>
+          </div>
 
-          <a href="http://localhost:3000">
+          <div className="col mb-4">
             <div className="sml-card">
               <div className='card-body'>
-                <div className='card-title'>
+                <h5 className='card-title'>
                     Reverse Alphabetical
-                </div>
+                </h5>
 
                 <div className='card-text'>
                         Play the Roulette in Reverse!
                 </div>
               </div>
             </div>
-          </a>
+          </div>
         </div>
       </div>
     </Layout>

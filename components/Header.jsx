@@ -4,14 +4,12 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 const homeHeader = () => {
-  return (<div
-    fluid
-    className="container header"
-  >
-    <h1 className="title">
+  return (
+    <div className="container-fluid header">
+      <h1 className="title">
         Welcome to the Daily Roulette!
-    </h1>
-  </div>);
+      </h1>
+    </div>);
 };
 
 export default function Header({
