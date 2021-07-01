@@ -2,21 +2,15 @@
 
 function SignUpForm() {
   return (
-    <Accordion>
-      <Accordion.Toggle
-        as={Button}
-        variant="primary"
-        eventKey="0"
-      >
-          Sign Up
-      </Accordion.Toggle>
+    <div className='accordion'>
+      <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Sign Up
+      </button>
 
-      <Accordion.Collapse eventKey="0">
-        <Card.Body>
-            This needs to be replaced with a Sign Up form
-        </Card.Body>
-      </Accordion.Collapse>
-    </Accordion>
+      <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        This needs to be replaced with a sign up form.
+      </button>
+    </div>
   );
 }
 

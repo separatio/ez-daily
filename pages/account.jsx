@@ -8,7 +8,7 @@ export default function Page() {
       <Header />
 
       <div className="content">
-        <Row className="justify-content-md-between" />
+        <div className="row justify-content-md-between" />
       </div>
     </div>
   );

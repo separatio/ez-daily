@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <Layout>
       {/* <Container className="content">
-        <Row className="justify-content-md-between">
+        <div className="row justify-content-md-between">
           <a href="http://localhost:3000">
             <Card className="sml-card">
               <Card.Body>
@@ -32,9 +32,9 @@ export default function Page() {
               </Card.Body>
             </Card>
           </a>
-        </Row>
+        </div>
 
-        <Row className="justify-content-md-between">
+        <div className="row justify-content-md-between">
           <a href="http://localhost:3000">
             <Card className="sml-card">
               <Card.Body>
@@ -62,7 +62,7 @@ export default function Page() {
               </Card.Body>
             </Card>
           </a>
-        </Row>
+        </div>
       </Container> */}
     </Layout>
   );

@@ -1,6 +1,7 @@
 import {signIn, signOut, useSession} from 'next-auth/client';
 import styles from '../style/Header.module.css';
 import Head from 'next/head';
+import Link from 'next/link';
 
 const homeHeader = () => {
   return (<div
@@ -35,16 +36,17 @@ export default function Header({
         <p className={`nojs-show ${(!session && loading) ? styles.loading : styles.loaded}`}>
           {!session && <>
             <span className={styles.notSignedInText}>You are not signed in</span>
-            <a
-              href={`/api/auth/signin`}
-              className={styles.buttonPrimary}
-              onClick={(e) => {
-                e.preventDefault();
-                signIn();
-              }}
-            >
+            <Link href='/api/auth/signin'>
+              <a
+                className={styles.buttonPrimary}
+                onClick={(e) => {
+                  e.preventDefault();
+                  signIn();
+                }}
+              >
                 Sign in
-            </a>
+              </a>
+            </Link>
           </>}
           {session && <>
             {session.user.image && <span style={{backgroundImage: `url(${session.user.image})`}} className={styles.avatar}/>}
@@ -52,16 +54,17 @@ export default function Header({
               <small>Signed in as</small><br/>
               <strong>{session.user.email || session.user.name}</strong>
             </span>
-            <a
-              href={`/api/auth/signout`}
-              className={styles.button}
-              onClick={(e) => {
-                e.preventDefault();
-                signOut();
-              }}
-            >
+            <Link href='/api/auth/signout'>
+              <a
+                className={styles.button}
+                onClick={(e) => {
+                  e.preventDefault();
+                  signOut();
+                }}
+              >
                 Sign out
-            </a>
+              </a>
+            </Link>
           </>}
         </p>
       </div>
