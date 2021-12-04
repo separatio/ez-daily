@@ -1,12 +1,13 @@
-import '../style/index.css'
-import { Provider } from 'next-auth/client'
+import '../styles/index.css'
+import { SessionProvider } from 'next-auth/react'
 
-const DailyFacilitator = ({ Component, pageProps }) => {
+export default function DailyFacilitator({
+  Component,
+  pageProps: { session, ...pageProps },
+}) {
   return (
-    <Provider session={pageProps.session}>
+    <SessionProvider session={session} refetchInterval={5 * 60}>
       <Component {...pageProps} />
-    </Provider>
+    </SessionProvider>
   )
 }
-
-export default DailyFacilitator
