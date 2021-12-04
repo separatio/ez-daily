@@ -1,5 +1,5 @@
-import Layout from '../components/Layout';
-import ChoiceCard from '../components/ChoiceCard';
+import Layout from '../components/Layout'
+import ChoiceCard from '../components/ChoiceCard'
 
 const choiceCardsData = [
   {
@@ -22,24 +22,17 @@ const choiceCardsData = [
     title: 'Reverse Alphabetical',
     text: 'Play the Roulette in Reverse!',
   },
-];
+]
 
 const ChoiceCardsList = () => {
   return (
     <div className="row row-cols-1 row-cols-md-2">
-      {
-        choiceCardsData.map((props) => {
-          return (
-            <ChoiceCard
-              {...props}
-              key={props.id}
-            />
-          );
-        })
-      }
+      {choiceCardsData.map((props) => {
+        return <ChoiceCard {...props} key={props.id} />
+      })}
     </div>
-  );
-};
+  )
+}
 
 export default function Page() {
   return (
@@ -48,5 +41,5 @@ export default function Page() {
         <ChoiceCardsList />
       </div>
     </Layout>
-  );
+  )
 }

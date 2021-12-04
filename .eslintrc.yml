@@ -3,10 +3,9 @@ env:
   es2021: true
   node: true
 extends:
-  - 'eslint:recommended'
   - 'plugin:react/recommended'
-  - 'google'
   - 'next'
+  - 'prettier'
 parserOptions:
   ecmaFeatures:
     jsx: true
@@ -14,17 +13,15 @@ parserOptions:
   sourceType: module
 plugins:
   - react
-rules: {
-  "react/react-in-jsx-scope": "off",
-  "require-jsdoc": "off",
-  "max-len": "off",
-  "react/prop-types": "off",
-  "new-cap": "off"
-}
-globals: {
-  "React": "writable"
-}
-settings:
-  react: {
-    version: detect
+  - material-ui
+rules:
+  {
+    'react/react-in-jsx-scope': 'off',
+    'require-jsdoc': 'off',
+    'max-len': 'off',
+    'react/prop-types': 'off',
+    'new-cap': 'off',
   }
+globals: { 'React': 'writable' }
+settings:
+  react: { version: detect }

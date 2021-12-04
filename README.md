@@ -5,20 +5,21 @@ This project has been created to be used during all-remote daily meetings.
 # Setup
 
 1. Before using the project, make sure to install node modules
-by run the following in the terminal:
+   by run the following in the terminal:
 
 ```
 yarn
 ```
 
 2. Install the Postgres Client for the database.
-The database server will be ran as a docker container later.
+   The database server will be ran as a docker container later.
 
 # Dockerization
 
 In order to run the project in development mode, please install `Docker` and `docker-compose`.
 
 Then simply run:
+
 ```
 docker-compose -f docker-compose.dev.yml up -d --build
 ```
