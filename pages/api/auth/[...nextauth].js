@@ -13,7 +13,7 @@ export default NextAuth({
     }),
   ],
   pages: {
-    signIn: '/auth/signin',
+    signIn: '/',
   },
   adapter: PrismaAdapter(prisma),
   secret: process.env.SECRET,
