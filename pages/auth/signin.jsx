@@ -1,4 +1,4 @@
-import { getProviders, signIn } from 'next-auth/react'
+import { getProviders } from 'next-auth/react'
 import Layout from '../../src/components/Layout'
 import SignInButton from '../../src/components/SignInButton'
 

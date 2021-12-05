@@ -16,4 +16,5 @@ export default NextAuth({
     signIn: '/auth/signin',
   },
   adapter: PrismaAdapter(prisma),
+  secret: process.env.SECRET,
 })
