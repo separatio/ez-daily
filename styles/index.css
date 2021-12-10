@@ -1,8 +1,6 @@
-/* ensure all pages have Bootstrap CSS */
-@import '~bootstrap/dist/css/bootstrap.min.css';
-
-.title, .subtitle {
-  color: #EEE;
+.title,
+.subtitle {
+  color: #eee;
 }
 
 a:hover {
@@ -11,7 +9,6 @@ a:hover {
 
 .header {
   text-align: center;
-  background-color: #3498db;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -23,13 +20,13 @@ a:hover {
 
 .sml-card {
   background-color: #3498db;
-  color: #EEE;
+  color: #eee;
   width: 22rem;
   margin: 1rem 0;
 }
 
 .sml-card:hover {
-  background-color: #0D2137;
+  background-color: #0d2137;
 }
 
 .sml-logo {
@@ -37,8 +34,16 @@ a:hover {
   margin-left: 10px;
 }
 
+body {
+  background-color: #3498db;
+}
+
+h1 {
+  font-size: 10rem;
+}
+
 #__next {
-  height:100vh;
+  height: 100vh;
 }
 
 footer {
