@@ -1,13 +1,8 @@
 import { Layout } from '../src/components'
 import { getProviders } from 'next-auth/react'
-import { SignInOptions } from '../src/components/authentication'
 
 const Home = () => {
-  return (
-    <Layout>
-      <SignInOptions />
-    </Layout>
-  )
+  return <Layout />
 }
 
 export async function getServerSideProps(context) {
@@ -16,6 +11,5 @@ export async function getServerSideProps(context) {
     props: { providers },
   }
 }
-
 
 export default Home
