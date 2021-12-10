@@ -8,7 +8,7 @@ const SignInButton = (provider) => {
         variant="contained"
         align="center"
         sx={{ mt: 3, mb: 2 }}
-        onClick={() => signIn(provider.id)}
+        onClick={() => signIn(provider.name)}
       >
         Sign in with {provider.name}
       </Button>
