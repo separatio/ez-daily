@@ -1,4 +1,4 @@
-import { useSession, signIn, signOut } from 'next-auth/react'
+import { useSession, signOut } from 'next-auth/react'
 import { SignInButton } from '.'
 
 const SignInOptions = ({ providers }) => {
@@ -11,13 +11,13 @@ const SignInOptions = ({ providers }) => {
       </>
     )
   }
-  return (
-    <>
-      {Object.values(providers).map((provider) => {
-        return SignInButton(provider)
-      })}
-    </>
-  )
+  return SignInButton()
+}
+
+SignInOptions.getInitialProps = async () => {
+  return {
+    providers: await providers(),
+  }
 }
 
 export default SignInOptions
