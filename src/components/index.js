@@ -1,5 +1,3 @@
 export { default as Layout } from './Layout'
-export { default as SignInButton } from './SignInButton'
-export { default as SignInOptions } from './SignInOptions'
 export { default as Header } from './Header'
 export { default as Footer } from './Footer'

@@ -1,6 +1,6 @@
 import { Layout } from '../src/components'
 import { getProviders } from 'next-auth/react'
-import { SignInOptions } from '../src/components'
+import { SignInOptions } from '../src/components/authentication'
 
 const Home = () => {
   return (
