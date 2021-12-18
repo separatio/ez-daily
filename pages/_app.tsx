@@ -5,6 +5,7 @@ import { Page } from '../src/components'
 import CssBaseline from '@mui/material/CssBaseline';
 import Head from 'next/head'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Box from '@mui/material/Box';
 
 const theme = createTheme({
   palette: {

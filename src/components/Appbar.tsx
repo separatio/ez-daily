@@ -1,4 +1,4 @@
-import { AppBar, Box, Toolbar, Typography, IconButton } from '@mui/material'
+import { AppBar, Toolbar, Typography, IconButton } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
 import { SignInOptions } from './authentication'
 
