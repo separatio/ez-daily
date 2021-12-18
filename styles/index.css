@@ -1,41 +1,8 @@
-.title,
-.subtitle {
-  color: #eee;
-}
-
 a:hover {
   text-decoration: none;
 }
 
-.header {
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.content {
-  max-width: 800px;
-  padding-top: 2rem;
-}
-
-.sml-card {
-  background-color: #3498db;
-  color: #eee;
-  width: 22rem;
-  margin: 1rem 0;
-}
-
-.sml-card:hover {
-  background-color: #0d2137;
-}
-
-.sml-logo {
-  height: 1em;
-  margin-left: 10px;
-}
-
 body {
-  /* background-color: #3498db; */
   padding-top: 3rem;
 }
 
