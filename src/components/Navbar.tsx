@@ -19,7 +19,7 @@ export default function Navbar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Daily Roulette
           </Typography>
-          <SignInOptions color="inherit" />
+          <SignInOptions />
         </Toolbar>
       </AppBar>
     </Box>

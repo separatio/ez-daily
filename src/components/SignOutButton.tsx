@@ -1,5 +1,5 @@
 import { signOut } from 'next-auth/react'
-import Button from '@mui/material/Button'
+import { Button } from '@mui/material'
 
 const SignInButton = (provider) => {
   return (

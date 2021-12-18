@@ -10,6 +10,8 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 
+type Anchor = 'top' | 'left' | 'bottom' | 'right';
+
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
     top: false,
@@ -18,15 +20,21 @@ export default function TemporaryDrawer() {
     right: false,
   });
 
-  const toggleDrawer = (anchor, open) => (event) => {
-    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-      return;
-    }
+  const toggleDrawer =
+    (anchor: Anchor, open: boolean) =>
+    (event: React.KeyboardEvent | React.MouseEvent) => {
+      if (
+        event.type === 'keydown' &&
+        ((event as React.KeyboardEvent).key === 'Tab' ||
+          (event as React.KeyboardEvent).key === 'Shift')
+      ) {
+        return;
+      }
 
-    setState({ ...state, [anchor]: open });
-  };
+      setState({ ...state, [anchor]: open });
+    };
 
-  const list = (anchor) => (
+  const list = (anchor: Anchor) => (
     <Box
       sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
       role="presentation"
@@ -59,7 +67,7 @@ export default function TemporaryDrawer() {
 
   return (
     <div>
-      {['left', 'right', 'top', 'bottom'].map((anchor) => (
+      {(['left', 'right', 'top', 'bottom'] as const).map((anchor) => (
         <React.Fragment key={anchor}>
           <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
           <Drawer
