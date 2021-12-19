@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import InboxIcon from '@mui/icons-material/MoveToInbox'
-import MailIcon from '@mui/icons-material/Mail'
 import Navbar from './Navbar'
 import MenuIcon from '@mui/icons-material/Menu'
 import {
@@ -14,6 +12,10 @@ import {
   ListItemText,
   Typography,
 } from '@mui/material'
+import GoogleIcon from '@mui/icons-material/Google'
+import LogoutIcon from '@mui/icons-material/Logout'
+import PlayArrowIcon from '@mui/icons-material/PlayArrow'
+import PeopleAltIcon from '@mui/icons-material/PeopleAlt'
 
 export default function TemporaryDrawer() {
   const [state, setState] = useState(Boolean)
@@ -34,32 +36,73 @@ export default function TemporaryDrawer() {
   const list = () => (
     <Box
       sx={{
-        width: 250
+        width: 250,
       }}
       role="presentation"
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
     >
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
+        <ListItem button>
+          <ListItemIcon>
+            <PlayArrowIcon
+              sx={{
+                color: 'white',
+              }}
+            />
+          </ListItemIcon>
+          <ListItemText primary="Start Daily" />
+        </ListItem>
+        <ListItem button>
+          <ListItemIcon>
+            <PeopleAltIcon
+              sx={{
+                color: 'white',
+              }}
+            />
+          </ListItemIcon>
+          <ListItemText primary="Teams" />
+        </ListItem>
+
+        <Divider
+          component="li"
+          variant="fullWidth"
+          sx={{
+            paddingTop: 5,
+            borderBlockColor: 'white',
+          }}
+        />
+        <li>
+          <Typography
+            sx={{ mt: 0.5, ml: 2 }}
+            color="text.primary"
+            display="block"
+            variant="caption"
+          >
+            Account
+          </Typography>
+        </li>
+
+        <ListItem button>
+          <ListItemIcon>
+            <GoogleIcon
+              sx={{
+                color: 'white',
+              }}
+            />
+          </ListItemIcon>
+          <ListItemText primary="Sign In with Google" />
+        </ListItem>
+        <ListItem button>
+          <ListItemIcon>
+            <LogoutIcon
+              sx={{
+                color: 'white',
+              }}
+            />
+          </ListItemIcon>
+          <ListItemText primary="Sign Out" />
+        </ListItem>
       </List>
     </Box>
   )
@@ -86,7 +129,7 @@ export default function TemporaryDrawer() {
         PaperProps={{
           sx: {
             backgroundColor: 'primary.main',
-          }
+          },
         }}
       >
         {list()}
