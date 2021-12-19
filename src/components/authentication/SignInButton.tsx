@@ -1,17 +1,19 @@
 import { signIn } from 'next-auth/react'
-import { Button } from '@mui/material'
+import { ListItem, ListItemIcon, ListItemText } from '@mui/material'
+import GoogleIcon from '@mui/icons-material/Google'
 
 const SignInButton = () => {
   return (
-    <div key="google">
-      <Button
-        variant="contained"
-        sx={{ mt: 3, mb: 2 }}
-        onClick={() => signIn('google')}
-      >
-        Sign in with Google
-      </Button>
-    </div>
+    <ListItem button onClick={() => signIn('google')}>
+      <ListItemIcon>
+        <GoogleIcon
+          sx={{
+            color: 'white',
+          }}
+        />
+      </ListItemIcon>
+      <ListItemText primary="Sign In with Google" />
+    </ListItem>
   )
 }
 

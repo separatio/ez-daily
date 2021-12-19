@@ -16,6 +16,7 @@ import GoogleIcon from '@mui/icons-material/Google'
 import LogoutIcon from '@mui/icons-material/Logout'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow'
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt'
+import { SignInOptions } from '../components/authentication'
 
 export default function TemporaryDrawer() {
   const [state, setState] = useState(Boolean)
@@ -83,26 +84,7 @@ export default function TemporaryDrawer() {
           </Typography>
         </li>
 
-        <ListItem button>
-          <ListItemIcon>
-            <GoogleIcon
-              sx={{
-                color: 'white',
-              }}
-            />
-          </ListItemIcon>
-          <ListItemText primary="Sign In with Google" />
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <LogoutIcon
-              sx={{
-                color: 'white',
-              }}
-            />
-          </ListItemIcon>
-          <ListItemText primary="Sign Out" />
-        </ListItem>
+        <SignInOptions />
       </List>
     </Box>
   )
