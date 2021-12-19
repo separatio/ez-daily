@@ -3,7 +3,7 @@ import { Button } from '@mui/material'
 
 const SignInButton = () => {
   return (
-    <div key='google'>
+    <div key="google">
       <Button
         variant="contained"
         sx={{ mt: 3, mb: 2 }}

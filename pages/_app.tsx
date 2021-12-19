@@ -2,9 +2,9 @@ import '../styles/index.css'
 import { SessionProvider } from 'next-auth/react'
 import type { AppProps } from 'next/app'
 import { Page } from '../src/components'
-import CssBaseline from '@mui/material/CssBaseline';
+import CssBaseline from '@mui/material/CssBaseline'
 import Head from 'next/head'
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { createTheme, ThemeProvider } from '@mui/material/styles'
 
 const theme = createTheme({
   palette: {
@@ -19,10 +19,10 @@ const theme = createTheme({
       primary: '#ffffff',
     },
     background: {
-      default: '#3498db'
+      default: '#3498db',
     },
-  }
-});
+  },
+})
 
 export default function DailyFacilitator({
   Component,
@@ -35,8 +35,14 @@ export default function DailyFacilitator({
         <Head>
           <title>Daily Facilitator</title>
           <meta charSet="utf-8" />
-          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-          <meta name="description" content="The Daily app for your Daily needs" />
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+          <meta
+            name="description"
+            content="The Daily app for your Daily needs"
+          />
         </Head>
 
         <Page>
