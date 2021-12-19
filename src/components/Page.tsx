@@ -1,10 +1,10 @@
 import Footer from './Footer'
-import Navbar from './Navbar'
+import LeftSideDrawer from './LeftSideDrawer'
 
 export default function Page({ children }) {
   return (
     <>
-      <Navbar />
+      <LeftSideDrawer />
       <main>{children}</main>
       <Footer />
     </>
