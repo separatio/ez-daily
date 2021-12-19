@@ -4,7 +4,7 @@ import LogoutIcon from '@mui/icons-material/Google'
 
 const SignOutButton = () => {
   return (
-    <ListItem button onClick={() => signOut()}>
+    <ListItem button onClick={() => signOut({ callbackUrl: '/' })}>
       <ListItemIcon>
         <LogoutIcon
           sx={{
