@@ -1,4 +1,6 @@
 import { AppBar, Box, Toolbar, Typography } from '@mui/material'
+import NextLink from 'next/link'
+import { Link as MUILink } from '@mui/material'
 
 export default function Navbar({ children }) {
   return (
@@ -7,7 +9,11 @@ export default function Navbar({ children }) {
         <Toolbar>
           {children}
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Daily Roulette
+            <NextLink href="/" passHref>
+              <MUILink color="inherit" underline="none">
+                Daily Roulette
+              </MUILink>
+            </NextLink>
           </Typography>
         </Toolbar>
       </AppBar>

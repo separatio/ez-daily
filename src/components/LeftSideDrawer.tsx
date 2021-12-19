@@ -12,11 +12,11 @@ import {
   ListItemText,
   Typography,
 } from '@mui/material'
-import GoogleIcon from '@mui/icons-material/Google'
-import LogoutIcon from '@mui/icons-material/Logout'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow'
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt'
 import { SignInOptions } from '../components/authentication'
+import Link from 'next/link'
+import HomeIcon from '@mui/icons-material/Home'
 
 export default function TemporaryDrawer() {
   const [state, setState] = useState(Boolean)
@@ -44,26 +44,44 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(false)}
     >
       <List>
-        <ListItem button>
-          <ListItemIcon>
-            <PlayArrowIcon
-              sx={{
-                color: 'white',
-              }}
-            />
-          </ListItemIcon>
-          <ListItemText primary="Start Daily" />
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <PeopleAltIcon
-              sx={{
-                color: 'white',
-              }}
-            />
-          </ListItemIcon>
-          <ListItemText primary="Teams" />
-        </ListItem>
+        <Link href="/" passHref>
+          <ListItem button>
+            <ListItemIcon>
+              <HomeIcon
+                sx={{
+                  color: 'white',
+                }}
+              />
+            </ListItemIcon>
+            <ListItemText primary="Home" />
+          </ListItem>
+        </Link>
+
+        <Link href="/daily" passHref>
+          <ListItem button>
+            <ListItemIcon>
+              <PlayArrowIcon
+                sx={{
+                  color: 'white',
+                }}
+              />
+            </ListItemIcon>
+            <ListItemText primary="Start Daily" />
+          </ListItem>
+        </Link>
+
+        <Link href="/teams" passHref>
+          <ListItem button>
+            <ListItemIcon>
+              <PeopleAltIcon
+                sx={{
+                  color: 'white',
+                }}
+              />
+            </ListItemIcon>
+            <ListItemText primary="Teams" />
+          </ListItem>
+        </Link>
 
         <Divider
           component="li"
