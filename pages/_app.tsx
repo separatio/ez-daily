@@ -24,7 +24,7 @@ const theme = createTheme({
   },
 })
 
-export default function DailyFacilitator({
+export default function DailyRoulette({
   Component,
   pageProps: { session, ...pageProps },
 }: AppProps) {
@@ -33,7 +33,7 @@ export default function DailyFacilitator({
       <CssBaseline />
       <SessionProvider session={session} refetchInterval={5 * 60}>
         <Head>
-          <title>Daily Facilitator</title>
+          <title>Daily Roulette</title>
           <meta charSet="utf-8" />
           <meta
             name="viewport"
