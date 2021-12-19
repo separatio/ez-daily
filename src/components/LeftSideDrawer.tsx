@@ -34,8 +34,7 @@ export default function TemporaryDrawer() {
   const list = () => (
     <Box
       sx={{
-        width: 250,
-        color: 'primary.main',
+        width: 250
       }}
       role="presentation"
       onClick={toggleDrawer(false)}
@@ -84,6 +83,11 @@ export default function TemporaryDrawer() {
         open={state}
         onClose={toggleDrawer(false)}
         variant="temporary"
+        PaperProps={{
+          sx: {
+            backgroundColor: 'primary.main',
+          }
+        }}
       >
         {list()}
       </Drawer>
