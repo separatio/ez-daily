@@ -4,7 +4,7 @@ import GoogleIcon from '@mui/icons-material/Google'
 
 const SignInButton = () => {
   return (
-    <ListItem button onClick={() => signIn('google', { callbackUrl: '/daily' })}>
+    <ListItem button onClick={() => signIn('google')}>
       <ListItemIcon>
         <GoogleIcon
           sx={{
