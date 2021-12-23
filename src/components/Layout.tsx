@@ -1,10 +1,10 @@
 import Footer from './Footer'
-import LeftSideDrawer from './LeftSideDrawer'
+import SideBar from './SideBar'
 
 export default function Layout({ children }) {
   return (
     <>
-      <LeftSideDrawer />
+      <SideBar />
       <main>{children}</main>
       <Footer />
     </>
