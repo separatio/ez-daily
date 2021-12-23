@@ -1,7 +1,7 @@
 import '../styles/index.css'
 import { SessionProvider } from 'next-auth/react'
 import type { AppProps } from 'next/app'
-import { Page } from '../src/components'
+import { Layout } from '../src/components'
 import CssBaseline from '@mui/material/CssBaseline'
 import Head from 'next/head'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
@@ -45,9 +45,9 @@ export default function DailyRoulette({
           />
         </Head>
 
-        <Page>
+        <Layout>
           <Component {...pageProps} />
-        </Page>
+        </Layout>
       </SessionProvider>
     </ThemeProvider>
   )
