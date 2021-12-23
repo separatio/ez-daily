@@ -14,12 +14,14 @@ import {
 } from '@mui/material'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow'
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt'
-import { SignInOptions } from '../components/authentication'
 import Link from 'next/link'
 import HomeIcon from '@mui/icons-material/Home'
+import {SignOutButton, SignInButton } from '../components/authentication'
+import { useSession } from 'next-auth/react'
 
-export default function TemporaryDrawer() {
+export default function LeftSideDrawer() {
   const [state, setState] = useState(Boolean)
+  const { data: session } = useSession()
 
   const toggleDrawer =
     (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
@@ -102,7 +104,7 @@ export default function TemporaryDrawer() {
           </Typography>
         </li>
 
-        <SignInOptions />
+        {session ? <SignOutButton /> : <SignInButton />}
       </List>
     </Box>
   )
@@ -121,6 +123,7 @@ export default function TemporaryDrawer() {
           <MenuIcon />
         </IconButton>
       </Navbar>
+
       <Drawer
         anchor="left"
         open={state}

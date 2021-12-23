@@ -10,7 +10,7 @@
     "docker:dev": "docker-compose -f docker-compose.dev.yml up --build",
     "docker:dev:down": "docker-compose -f docker-compose.dev.yml down",
     "lint": "next lint",
-    "reset:postgres": "dotenv -e .env.development -- yarn prisma migrate dev",
+    "migrate": "dotenv -e .env.migrations -- yarn prisma migrate dev",
     "typecheck": "tsc --noEmit",
     "prettier": "prettier --write ."
   },
