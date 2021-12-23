@@ -1,7 +1,7 @@
 import Footer from './Footer'
 import LeftSideDrawer from './LeftSideDrawer'
 
-export default function Page({ children }) {
+export default function Layout({ children }) {
   return (
     <>
       <LeftSideDrawer />

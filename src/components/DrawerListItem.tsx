@@ -13,18 +13,20 @@ import {
 import PlayArrowIcon from '@mui/icons-material/PlayArrow'
 
 const DrawerListItem = () => {
-  return <Link href="/daily" passHref>
-    <ListItem button>
-      <ListItemIcon>
-        <PlayArrowIcon
-          sx={{
-            color: 'white',
-          }}
-        />
-      </ListItemIcon>
-      <ListItemText primary="Start Daily" />
-    </ListItem>
-  </Link>
+  return (
+    <Link href="/daily" passHref>
+      <ListItem button>
+        <ListItemIcon>
+          <PlayArrowIcon
+            sx={{
+              color: 'white',
+            }}
+          />
+        </ListItemIcon>
+        <ListItemText primary="Start Daily" />
+      </ListItem>
+    </Link>
+  )
 }
 
 export default DrawerListItem

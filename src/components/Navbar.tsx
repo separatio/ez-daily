@@ -8,7 +8,7 @@ export default function Navbar({ children }) {
       <AppBar position="fixed">
         <Toolbar>
           {children}
-          <Typography align='center' variant="h6" sx={{ flexGrow: 1 }}>
+          <Typography align="center" variant="h6" sx={{ flexGrow: 1 }}>
             <NextLink href="/" passHref>
               <MUILink color="inherit" underline="none">
                 Daily Roulette

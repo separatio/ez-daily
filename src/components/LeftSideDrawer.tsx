@@ -16,7 +16,7 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow'
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt'
 import Link from 'next/link'
 import HomeIcon from '@mui/icons-material/Home'
-import {SignOutButton, SignInButton } from '../components/authentication'
+import { SignOutButton, SignInButton } from '../components/authentication'
 import { useSession } from 'next-auth/react'
 
 export default function LeftSideDrawer() {
