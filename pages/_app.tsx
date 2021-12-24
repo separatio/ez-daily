@@ -24,10 +24,10 @@ const theme = createTheme({
   },
 })
 
-export default function DailyRoulette({
+const DailyRoulette = ({
   Component,
   pageProps: { session, ...pageProps },
-}: AppProps) {
+}: AppProps) => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -52,3 +52,5 @@ export default function DailyRoulette({
     </ThemeProvider>
   )
 }
+
+export default DailyRoulette

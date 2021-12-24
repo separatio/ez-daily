@@ -4,7 +4,7 @@ import MenuIcon from '@mui/icons-material/Menu'
 import { Box, IconButton, Drawer } from '@mui/material'
 import SideBarList from './SideBarList'
 
-export default function SideBar() {
+const SideBar = () => {
   const [state, setState] = useState(Boolean)
 
   const toggleDrawer =
@@ -60,3 +60,5 @@ export default function SideBar() {
     </>
   )
 }
+
+export default SideBar

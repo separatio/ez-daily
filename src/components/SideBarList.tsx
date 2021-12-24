@@ -42,7 +42,7 @@ const linksList = [
   },
 ]
 
-export default function SideBarList() {
+const SideBarList = () => {
   const { data: session } = useSession()
 
   return (
@@ -81,3 +81,5 @@ export default function SideBarList() {
     </List>
   )
 }
+
+export default SideBarList

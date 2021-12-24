@@ -18,10 +18,12 @@ const Copyright = (props) => {
   )
 }
 
-export default function Footer() {
+const Footer = () => {
   return (
     <footer>
       <Copyright />
     </footer>
   )
 }
+
+export default Footer
