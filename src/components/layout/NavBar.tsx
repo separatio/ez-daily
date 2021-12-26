@@ -1,6 +1,6 @@
 import { AppBar, Box, Toolbar } from '@mui/material'
 
-const NavBar = ({ children }) => {
+const NavBar = ({ children }: NavbarProps) => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="fixed">
@@ -8,6 +8,10 @@ const NavBar = ({ children }) => {
       </AppBar>
     </Box>
   )
+}
+
+interface NavbarProps {
+  children: React.ReactNode
 }
 
 export default NavBar

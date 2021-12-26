@@ -11,9 +11,8 @@ import {
   Tooltip,
 } from '@mui/material'
 import { People, Edit } from '@mui/icons-material'
-import PropTypes from 'prop-types'
 
-const TeamList = ({ memberList }) => {
+const TeamList = ({ memberList }: TeamListProps) => {
   return (
     <List
       sx={{
@@ -61,8 +60,8 @@ const TeamList = ({ memberList }) => {
   )
 }
 
-TeamList.propTypes = {
-  memberList: PropTypes.arrayOf(PropTypes.string),
+interface TeamListProps {
+  memberList: string[]
 }
 
 export default TeamList

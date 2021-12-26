@@ -1,7 +1,8 @@
+import * as React from 'react'
 import Footer from './Footer'
 import SideBar from './SideBar'
 
-const Layout = ({ children }) => {
+const Layout = ({ children }: LayoutProps) => {
   return (
     <>
       <SideBar />
@@ -9,6 +10,10 @@ const Layout = ({ children }) => {
       <Footer />
     </>
   )
+}
+
+interface LayoutProps {
+  children: React.ReactNode
 }
 
 export default Layout
