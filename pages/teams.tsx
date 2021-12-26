@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 
 import { Typography } from '@mui/material'
-import TeamList from '../src/components/TeamList'
+import TeamList from '../src/components/teams/TeamList'
 
 const Teams: NextPage = () => {
   const memberList = ['Test Team 1', 'Test Team 2']

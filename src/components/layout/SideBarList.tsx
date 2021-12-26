@@ -1,5 +1,5 @@
 import { Box, List, Divider, Typography } from '@mui/material'
-import { SignOutButton, SignInButton } from './authentication'
+import { SignOutButton, SignInButton } from '../authentication'
 import SideBarItem from './SideBarItem'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow'
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt'
