@@ -7,6 +7,7 @@ import Head from 'next/head'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 
 const theme = createTheme({
+  spacing: 4,
   palette: {
     mode: 'light',
     primary: {
