@@ -12,9 +12,10 @@ const theme = createTheme({
     },
     text: {
       primary: '#ffffff',
+      secondary: '#1976d2',
     },
     background: {
-      default: '#3498db',
+      default: '#ffffff',
     },
   },
   components: {

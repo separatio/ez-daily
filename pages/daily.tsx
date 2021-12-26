@@ -2,19 +2,7 @@ import { Button, Grid, Typography } from '@mui/material'
 import type { NextPage } from 'next'
 import { useState } from 'react'
 import { useSession } from 'next-auth/react'
-
-let memberList = [
-  'Aleksandr',
-  'Andrei',
-  'Denys',
-  'Dmitry',
-  'Huy',
-  'Ilya',
-  'Kavitha',
-  'Rafal',
-  'Sergiu',
-  'Timofei',
-]
+import { memberList } from '../test_var/Const'
 
 function selectTeamMember() {
   let member = ''
@@ -56,6 +44,7 @@ const Daily: NextPage = () => {
           fontSize: '5rem',
           textTransform: 'none',
           fontFamily: 'Montserrat',
+          borderRadius: '20px',
         }}
         onClick={() => {
           setTeamMember((teamMember) => {
@@ -71,6 +60,7 @@ const Daily: NextPage = () => {
           fontSize: '10rem',
           fontFamily: 'Montserrat',
           marginTop: '2rem',
+          color: 'text.secondary',
         }}
       >
         {teamMember}
