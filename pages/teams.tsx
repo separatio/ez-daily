@@ -4,7 +4,20 @@ import { Typography } from '@mui/material'
 import TeamList from '../src/components/teams/TeamList'
 
 const Teams: NextPage = () => {
-  const memberList = ['Test Team 1', 'Test Team 2']
+  //TODO: replace lists with db/gql query
+  const memberList = [
+    'Aleksandr',
+    'Alex',
+    'Andrei',
+    'Denys',
+    'Huy',
+    'Ilya',
+    'Kavitha',
+    'Rafal',
+    'Sergiu',
+    'Timofei',
+  ]
+  const teamList = ['Staff Portal Tango']
 
   return (
     <>
@@ -12,7 +25,15 @@ const Teams: NextPage = () => {
         {'Teams'}
       </Typography>
 
-      <TeamList memberList={memberList} />
+      {teamList.map((teamName) => {
+        return (
+          <TeamList
+            key={teamName}
+            teamName={teamName}
+            memberList={memberList}
+          />
+        )
+      })}
     </>
   )
 }

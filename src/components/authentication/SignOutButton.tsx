@@ -6,11 +6,7 @@ const SignOutButton = () => {
   return (
     <ListItem button onClick={() => signOut({ callbackUrl: '/' })}>
       <ListItemIcon>
-        <LogoutIcon
-          sx={{
-            color: 'white',
-          }}
-        />
+        <LogoutIcon />
       </ListItemIcon>
       <ListItemText primary="Sign Out" />
     </ListItem>

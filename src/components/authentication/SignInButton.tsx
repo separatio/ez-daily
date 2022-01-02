@@ -6,11 +6,7 @@ const SignInButton = () => {
   return (
     <ListItem button onClick={() => signIn('google')}>
       <ListItemIcon>
-        <GoogleIcon
-          sx={{
-            color: 'white',
-          }}
-        />
+        <GoogleIcon />
       </ListItemIcon>
       <ListItemText primary="Sign In with Google" />
     </ListItem>

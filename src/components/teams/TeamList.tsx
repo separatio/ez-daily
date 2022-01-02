@@ -1,66 +1,50 @@
-import MembersList from './MembersList'
-
 import {
   List,
-  TextField,
   ListItem,
   ListItemButton,
   ListItemText,
   Paper,
   IconButton,
   Tooltip,
+  Divider,
 } from '@mui/material'
 import { People, Edit } from '@mui/icons-material'
+import TeamListSubHeader from './TeamListSubHeader'
 
-const TeamList = ({ memberList }: TeamListProps) => {
+const TeamList = ({ teamName, memberList }: TeamListProps) => {
   return (
     <List
       sx={{
         display: 'grid',
         justifyContent: 'center',
       }}
+      subheader={<TeamListSubHeader teamName={teamName} />}
     >
       <Paper
         sx={{
           backgroundColor: 'primary.main',
         }}
       >
-        {memberList.map((teamName: string) => {
+        {memberList.map((teamMemberName: string) => {
           return (
-            <ListItem disablePadding key={teamName}>
+            <ListItem disablePadding key={teamMemberName}>
               <ListItemButton>
-                <ListItemText primary={teamName} />
+                <ListItemText primary={teamMemberName} />
               </ListItemButton>
-              <Tooltip title="Edit Team name">
-                <IconButton sx={{ color: 'white' }}>
-                  <Edit />
-                </IconButton>
-              </Tooltip>
-
-              <Tooltip title="Edit Team members">
-                <IconButton sx={{ color: 'white' }}>
-                  <People />
-                </IconButton>
-              </Tooltip>
             </ListItem>
           )
         })}
 
-        <TextField
-          id="standard-basic"
-          label="Standard"
-          variant="standard"
-          sx={{
-            color: 'white',
-            borderColor: 'white',
-          }}
-        />
+        <Divider color="black" />
+
+        <ListItem>{'Start the daily!'}</ListItem>
       </Paper>
     </List>
   )
 }
 
 interface TeamListProps {
+  teamName: string
   memberList: string[]
 }
 

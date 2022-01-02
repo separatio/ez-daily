@@ -9,35 +9,17 @@ import { useSession } from 'next-auth/react'
 const linksList = [
   {
     href: '/',
-    icon: (
-      <HomeIcon
-        sx={{
-          color: 'white',
-        }}
-      />
-    ),
+    icon: <HomeIcon />,
     text: 'Home',
   },
   {
     href: '/daily',
-    icon: (
-      <PlayArrowIcon
-        sx={{
-          color: 'white',
-        }}
-      />
-    ),
+    icon: <PlayArrowIcon />,
     text: 'Start Daily',
   },
   {
     href: '/teams',
-    icon: (
-      <PeopleAltIcon
-        sx={{
-          color: 'white',
-        }}
-      />
-    ),
+    icon: <PeopleAltIcon />,
     text: 'Teams',
   },
 ]
@@ -67,12 +49,7 @@ const SideBarList = () => {
         }}
       />
       <li>
-        <Typography
-          sx={{ mt: 0.5, ml: 2 }}
-          color="text.primary"
-          display="block"
-          variant="caption"
-        >
+        <Typography sx={{ mt: 0.5, ml: 2 }} display="block" variant="caption">
           Account
         </Typography>
       </li>
