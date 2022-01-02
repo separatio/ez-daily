@@ -4,12 +4,14 @@ import {
   ListItemButton,
   ListItemText,
   Paper,
-  IconButton,
-  Tooltip,
   Divider,
+  ListItemAvatar,
+  Avatar,
 } from '@mui/material'
-import { People, Edit } from '@mui/icons-material'
 import TeamListSubHeader from './TeamListSubHeader'
+import PlayArrowIcon from '@mui/icons-material/PlayArrow'
+import EngineeringIcon from '@mui/icons-material/Engineering'
+import Link from 'next/link'
 
 const TeamList = ({ teamName, memberList }: TeamListProps) => {
   return (
@@ -27,17 +29,29 @@ const TeamList = ({ teamName, memberList }: TeamListProps) => {
       >
         {memberList.map((teamMemberName: string) => {
           return (
-            <ListItem disablePadding key={teamMemberName}>
-              <ListItemButton>
-                <ListItemText primary={teamMemberName} />
-              </ListItemButton>
+            <ListItem key={teamMemberName}>
+              <ListItemAvatar>
+                <Avatar sx={{ bgcolor: 'secondary.main' }}>
+                  <EngineeringIcon />
+                </Avatar>
+              </ListItemAvatar>
+              <ListItemText primary={teamMemberName} />
             </ListItem>
           )
         })}
 
         <Divider color="black" />
 
-        <ListItem>{'Start the daily!'}</ListItem>
+        <Link href="/daily" passHref>
+          <ListItemButton>
+            <ListItemAvatar>
+              <Avatar sx={{ bgcolor: 'secondary.main' }}>
+                <PlayArrowIcon />
+              </Avatar>
+            </ListItemAvatar>
+            <ListItemText primary="Start the daily!" />
+          </ListItemButton>
+        </Link>
       </Paper>
     </List>
   )
