@@ -1,6 +1,7 @@
 import { Button, Grid, Typography } from '@mui/material'
 import type { NextPage } from 'next'
 import { useState } from 'react'
+import { useSession } from 'next-auth/react'
 
 let memberList = [
   'Aleksandr',
@@ -31,7 +32,12 @@ function selectTeamMember() {
 }
 
 const Daily: NextPage = () => {
+  const { data: session, status } = useSession()
   const [teamMember, setTeamMember] = useState("Let's start!")
+
+  if (status === 'unauthenticated') {
+    return <p>Access Denied</p>
+  }
 
   return (
     <Grid
