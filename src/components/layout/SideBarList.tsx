@@ -1,4 +1,4 @@
-import { Box, List, Divider, Typography } from '@mui/material'
+import { List, Divider, Typography } from '@mui/material'
 import { SignOutButton, SignInButton } from '../authentication'
 import SideBarItem from './SideBarItem'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow'
@@ -7,11 +7,6 @@ import HomeIcon from '@mui/icons-material/Home'
 import { useSession } from 'next-auth/react'
 
 const linksList = [
-  {
-    href: '/',
-    icon: <HomeIcon />,
-    text: 'Home',
-  },
   {
     href: '/daily',
     icon: <PlayArrowIcon />,
@@ -29,15 +24,18 @@ const SideBarList = () => {
 
   return (
     <List>
+      <SideBarItem href="/" icon={<HomeIcon />} text="Home" />
+
       {linksList.map((item) => {
-        return (
-          <SideBarItem
-            key={linksList.indexOf(item)}
-            href={item.href}
-            icon={item.icon}
-            text={item.text}
-          />
-        )
+        if (session)
+          return (
+            <SideBarItem
+              key={linksList.indexOf(item)}
+              href={item.href}
+              icon={item.icon}
+              text={item.text}
+            />
+          )
       })}
 
       <Divider

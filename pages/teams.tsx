@@ -2,8 +2,11 @@ import type { NextPage } from 'next'
 
 import { Typography } from '@mui/material'
 import TeamList from '../src/components/teams/TeamList'
+import { useSession } from 'next-auth/react'
 
 const Teams: NextPage = () => {
+  const { data: session, status } = useSession()
+
   //TODO: replace lists with db/gql query
   const memberList = [
     'Aleksandr',
@@ -18,6 +21,10 @@ const Teams: NextPage = () => {
     'Timofei',
   ]
   const teamList = ['Staff Portal Tango']
+
+  if (status === 'unauthenticated') {
+    return <p>Access Denied</p>
+  }
 
   return (
     <>
