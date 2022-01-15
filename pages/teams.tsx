@@ -1,8 +1,9 @@
 import type { NextPage } from 'next'
 
-import { Typography } from '@mui/material'
+import { Grid, Typography } from '@mui/material'
 import TeamList from '../src/components/teams/TeamList'
 import { useSession } from 'next-auth/react'
+import AddTeamButton from '../src/components/teams/AddTeamForm'
 
 const Teams: NextPage = () => {
   const { data: session, status } = useSession()
@@ -32,15 +33,25 @@ const Teams: NextPage = () => {
         {'Teams'}
       </Typography>
 
-      {teamList.map((teamName) => {
-        return (
-          <TeamList
-            key={teamName}
-            teamName={teamName}
-            memberList={memberList}
-          />
-        )
-      })}
+      <Grid
+        container
+        direction="row"
+        justifyContent="center"
+        alignItems="flex-start"
+        columnSpacing={2}
+      >
+        {teamList.map((teamName) => {
+          return (
+            <Grid item key={teamName}>
+              <TeamList teamName={teamName} memberList={memberList} />
+            </Grid>
+          )
+        })}
+
+        <Grid item>
+          <AddTeamButton />
+        </Grid>
+      </Grid>
     </>
   )
 }

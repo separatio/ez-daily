@@ -19,6 +19,7 @@ const TeamList = ({ teamName, memberList }: TeamListProps) => {
       sx={{
         display: 'grid',
         justifyContent: 'center',
+        minWidth: 226,
       }}
       subheader={<TeamListSubHeader teamName={teamName} />}
     >
