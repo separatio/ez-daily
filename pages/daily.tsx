@@ -50,12 +50,12 @@ const Daily: NextPage = () => {
         paddingTop: '10rem',
       }}
     >
-      {' '}
       <Button
         variant="contained"
         sx={{
           fontSize: '5rem',
-          text-transform: none;
+          textTransform: 'none',
+          fontFamily: 'consolas',
         }}
         onClick={() => {
           setTeamMember((teamMember) => {
@@ -64,14 +64,16 @@ const Daily: NextPage = () => {
         }}
       >
         Daily Roulette!
-      </Button>{' '}
+      </Button>
+
       <Typography
         sx={{
-          fontSize: '5rem',
-          textTransform: 'none',
+          fontSize: '10rem',
+          fontFamily: 'consolas',
+          marginTop: '2rem',
         }}
       >
-        <h1>{teamMember}</h1>
+        {teamMember}
       </Typography>
     </Grid>
   )
