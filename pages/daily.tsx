@@ -68,6 +68,7 @@ const Daily: NextPage = () => {
       <Typography
         sx={{
           fontSize: '5rem',
+          textTransform: 'none',
         }}
       >
         <h1>{teamMember}</h1>
