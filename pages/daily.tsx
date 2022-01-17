@@ -55,7 +55,7 @@ const Daily: NextPage = () => {
         sx={{
           fontSize: '5rem',
           textTransform: 'none',
-          fontFamily: 'consolas',
+          fontFamily: 'Montserrat',
         }}
         onClick={() => {
           setTeamMember((teamMember) => {
@@ -69,7 +69,7 @@ const Daily: NextPage = () => {
       <Typography
         sx={{
           fontSize: '10rem',
-          fontFamily: 'consolas',
+          fontFamily: 'Montserrat',
           marginTop: '2rem',
         }}
       >
