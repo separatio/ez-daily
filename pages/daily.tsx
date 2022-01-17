@@ -55,6 +55,7 @@ const Daily: NextPage = () => {
         variant="contained"
         sx={{
           fontSize: '5rem',
+          text-transform: none;
         }}
         onClick={() => {
           setTeamMember((teamMember) => {
