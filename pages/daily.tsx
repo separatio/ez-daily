@@ -5,9 +5,9 @@ import { useSession } from 'next-auth/react'
 
 let memberList = [
   'Aleksandr',
-  'Alex',
   'Andrei',
   'Denys',
+  'Dmitry',
   'Huy',
   'Ilya',
   'Kavitha',
