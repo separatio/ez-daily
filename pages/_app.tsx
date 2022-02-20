@@ -6,6 +6,12 @@ import CssBaseline from '@mui/material/CssBaseline'
 import Head from 'next/head'
 import { ThemeProvider } from '@mui/material/styles'
 import theme from '../src/theme'
+import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
+
+const client = new ApolloClient({
+  cache: new InMemoryCache(),
+  uri: "/api",
+});
 
 const DailyRoulette = ({
   Component,
@@ -19,7 +25,9 @@ const DailyRoulette = ({
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Layout>
-          <Component {...pageProps} />
+          <ApolloProvider client={client}>
+            <Component {...pageProps} />
+          </ApolloProvider>
         </Layout>
       </ThemeProvider>
     </SessionProvider>
