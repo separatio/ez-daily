@@ -60,5 +60,6 @@ model Team {
   id          Int      @id @default(autoincrement())
   title       String
   teamMembers String[]
-  users       User[]
+  author      User?   @relation(fields: [authorEmail], references: [email])
+  authorEmail String?
 }
