@@ -4,11 +4,23 @@ import type { NextPage } from 'next'
 const Home: NextPage = () => {
   return (
     <>
-      <Typography variant="h2" align="center">
+      <Typography
+        variant="h2"
+        align="center"
+        sx={{
+          color: 'text.secondary',
+        }}
+      >
         {'Welcome to the Daily Roulette!'}
       </Typography>
 
-      <Typography variant="h5" align="center">
+      <Typography
+        variant="h5"
+        align="center"
+        sx={{
+          color: 'text.secondary',
+        }}
+      >
         {'Please click the menu icon at the top left to get started'}
       </Typography>
     </>
