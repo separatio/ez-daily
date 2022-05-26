@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import NavBar from './NavBar'
+import NavBar from './NavBar/NavBar'
 import MenuIcon from '@mui/icons-material/Menu'
 import { Box, IconButton, Drawer } from '@mui/material'
 import SideBarList from './SideBarList'

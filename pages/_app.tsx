@@ -14,6 +14,7 @@ const DailyRoulette = ({
   return (
     <SessionProvider session={session} refetchInterval={5 * 60}>
       <Head>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <title>Daily Roulette</title>
       </Head>
       <ThemeProvider theme={theme}>
