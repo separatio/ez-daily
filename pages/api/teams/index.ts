@@ -10,9 +10,14 @@ export default async function handle(
   const session = await getSession({ req })
 
   if (session) {
-    const result = await prisma.team.findMany({
-      where: { authorEmail: session.user.email | undefined }
-    });
+    const result =
+      session.user?.email &&
+      (await prisma.team.findMany({
+        where: {
+          authorEmail: session.user.email,
+        },
+      }))
+
     res.json(result)
   } else {
     res.status(401).send({ message: 'Unauthorized' })
