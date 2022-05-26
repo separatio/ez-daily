@@ -10,7 +10,8 @@
     "docker:dev": "docker-compose -f docker-compose.dev.yml up --build",
     "docker:dev:down": "docker-compose -f docker-compose.dev.yml down",
     "lint": "next lint",
-    "migrate": "dotenv -e .env.migrations -- yarn prisma migrate dev",
+    "migrate:dev": "yarn prisma migrate dev",
+    "migrate:prod": "yarn prisma migrate deploy",
     "typecheck": "tsc --noEmit",
     "prettier": "prettier --write .",
     "static-checks": "yarn prettier && yarn lint && yarn typecheck"
