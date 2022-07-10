@@ -2,27 +2,29 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import { getSession } from 'next-auth/react'
 import { prisma } from '../../../src/lib/prisma'
 
-// DELETE /api/post/:id
+// DELETE /api/team/:id
 export default async function handle(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const postId = req.query.id
+  const teamId = req.query.id
 
   const session = await getSession({ req })
 
-  if (req.method === 'DELETE') {
-    if (session) {
-      const post = await prisma.team.delete({
-        where: { id: Number(postId) },
-      })
-      res.json(post)
-    } else {
-      res.status(401).send({ message: 'Unauthorized' })
+  if (session) {
+    switch (req.method) {
+      case 'DELETE': {
+        const team = await prisma.team.delete({
+          where: { id: Number(teamId) },
+        })
+        res.json(team)
+      }
+      default:
+        throw new Error(
+          `The HTTP ${req.method} method is not supported at this route.`
+        )
     }
   } else {
-    throw new Error(
-      `The HTTP ${req.method} method is not supported at this route.`
-    )
+    res.status(401).send({ message: 'Unauthorized' })
   }
 }
