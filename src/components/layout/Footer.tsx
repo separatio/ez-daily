@@ -1,12 +1,16 @@
-import { Typography, Link } from '@mui/material'
+import { Typography, Link as MUILink } from '@mui/material'
+import Link from 'next/link'
 
 const Copyright = () => {
   return (
-    <Typography variant="body2" align="center">
+    <Typography color='text.secondary' align="center">
       {'Copyright © '}
-      <Link color="inherit" href="">
-        Daily Roulette
-      </Link>{' '}
+      <Link href='/' passHref>
+        <MUILink>
+          Daily Roulette
+        </MUILink>
+      </Link>
+      {' '}
       {new Date().getFullYear()}
       {'.'}
     </Typography>
