@@ -3,14 +3,11 @@ import Link from 'next/link'
 
 const Copyright = () => {
   return (
-    <Typography color='text.secondary' align="center">
+    <Typography color="text.secondary" align="center">
       {'Copyright © '}
-      <Link href='/' passHref>
-        <MUILink>
-          Daily Roulette
-        </MUILink>
-      </Link>
-      {' '}
+      <Link href="/" passHref>
+        <MUILink>Daily Roulette</MUILink>
+      </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
     </Typography>
