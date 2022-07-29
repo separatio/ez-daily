@@ -1,38 +1,30 @@
-# Daily Roulette
+# Easy Daily
 
 This project has been created to be used during all-remote daily meetings.
 
 # Setup
 
-1. Before using the project, make sure to install node modules
-   by run the following in the terminal:
-
+1. Install node modules by running:
 ```
-yarn
+yarn install
 ```
 
-2. Install the Postgres Client for the database.
-   The database server will be ran as a docker container later.
+2. Install Docker and make sure `docker compose` is installed as well.
 
-# Dockerization
+# Running in development mode
 
-In order to run the project in development mode, please install `Docker` and `docker-compose`.
-
-Then simply run:
-
+Simply run:
 ```
-docker-compose -f docker-compose.dev.yml up -d --build
+yarn docker:dev
 ```
 
-This should start up all the needed containers, along with hot reload, in Docker.
+This will start up both the server and a database locally, while still using hot reload.
 
 ## Database
 
-In order to set up the project completely, you still need to generate the db.
-You can do this via `npx` in the terminal, by running the following in the project folder:
+In order to set up the project completely, you need to generate the db.
+After running `yarn docker:dev`, the database can be created via:
 
 ```
 npx prisma migrate dev --preview-feature
 ```
-
-This will set up the database from scratch.
