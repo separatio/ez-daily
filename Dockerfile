@@ -1,24 +1,48 @@
-# This file is WIP and still needs work done on it
-# See guide https://docs.docker.com/language/nodejs/
-# for more information on how to complete it accordingly
-FROM node:lts-alpine3.14 as builder
-
-ENV NODE_ENV=production
+# Install dependencies only when needed
+FROM node:16-alpine AS deps
+# Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
+RUN apk add --no-cache libc6-compat
 WORKDIR /app
-COPY ["package.json", "yarn.lock*", "./"]
+
+# Install dependencies based on the preferred package manager
+COPY package.json yarn.lock* ./
 COPY prisma ./prisma/
 
-RUN yarn install
+RUN yarn --frozen-lockfile
+
+# Rebuild the source code only when needed
+FROM node:16-alpine AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 RUN yarn build
 
-FROM node:lts-alpine3.14
+# Production image, copy all the files and run next
+FROM node:16-alpine AS runner
+WORKDIR /app
 
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package.json ./
-COPY --from=builder /app/yarn.lock ./
-COPY --from=builder /app/dist ./dist
+ENV NODE_ENV production
+# Uncomment the following line in case you want to disable telemetry during runtime.
+# ENV NEXT_TELEMETRY_DISABLED 1
+
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
+
+# You only need to copy next.config.js if you are NOT using the default configuration
+COPY --from=builder /app/next.config.js ./
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/package.json ./package.json
+
+# Automatically leverage output traces to reduce image size
+# https://nextjs.org/docs/advanced-features/output-file-tracing
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+USER nextjs
 
 EXPOSE 3000
-CMD [ "yarn", "start"]
+
+ENV PORT 3000
+
+CMD ["yarn", "start"]
