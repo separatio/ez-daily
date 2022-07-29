@@ -6,9 +6,9 @@ WORKDIR /app
 
 # Install dependencies based on the preferred package manager
 COPY package.json yarn.lock* ./
-RUN yarn --frozen-lockfile
-
 COPY prisma ./prisma/
+
+RUN yarn --frozen-lockfile
 
 # Rebuild the source code only when needed
 FROM node:16-alpine AS builder
