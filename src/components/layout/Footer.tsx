@@ -6,7 +6,7 @@ const Copyright = () => {
     <Typography color="text.secondary" align="center">
       {'Copyright © '}
       <Link href="/" passHref>
-        <MUILink>Daily Roulette</MUILink>
+        <MUILink>Ez Daily</MUILink>
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}

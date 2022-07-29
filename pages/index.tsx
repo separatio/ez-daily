@@ -11,7 +11,7 @@ const Home: NextPage = () => {
           color: 'text.secondary',
         }}
       >
-        {'Welcome to the Daily Roulette!'}
+        {'Welcome to Ez Daily!'}
       </Typography>
 
       <Typography

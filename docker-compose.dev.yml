@@ -19,7 +19,7 @@ services:
     volumes:
       - postgres:/var/lib/postgresql/data
     environment:
-      - POSTGRES_DB=facilitator
+      - POSTGRES_DB=ezdaily
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     ports:

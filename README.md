@@ -1,10 +1,11 @@
-# Easy Daily
+# Ez Daily
 
 This project has been created to be used during all-remote daily meetings.
 
 # Setup
 
 1. Install node modules by running:
+
 ```
 yarn install
 ```
@@ -14,6 +15,7 @@ yarn install
 # Running in development mode
 
 Simply run:
+
 ```
 yarn docker:dev
 ```

@@ -7,7 +7,7 @@ import Head from 'next/head'
 import { ThemeProvider } from '@mui/material/styles'
 import theme from '../src/theme'
 
-const DailyRoulette = ({
+const EzDaily = ({
   Component,
   pageProps: { session, ...pageProps },
 }: AppProps) => {
@@ -15,7 +15,7 @@ const DailyRoulette = ({
     <SessionProvider session={session} refetchInterval={5 * 60}>
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <title>Daily Roulette</title>
+        <title>Ez Daily</title>
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
@@ -27,4 +27,4 @@ const DailyRoulette = ({
   )
 }
 
-export default DailyRoulette
+export default EzDaily

@@ -52,7 +52,7 @@ const Daily: NextPage = () => {
           })
         }}
       >
-        Daily Roulette!
+        Ez Daily!
       </Button>
 
       <Typography
