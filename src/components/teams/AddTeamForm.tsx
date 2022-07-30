@@ -2,6 +2,7 @@ import { Input, InputLabel } from '@mui/material'
 import { FormControl } from '@mui/material'
 import Router from 'next/router'
 import { useState } from 'react'
+import { mutate } from 'swr'
 
 const AddTeamForm = () => {
   const [title, setTitle] = useState('')
@@ -20,6 +21,8 @@ const AddTeamForm = () => {
     } catch (error) {
       console.error(error)
     }
+
+    mutate('/api/teams')
   }
 
   return (
