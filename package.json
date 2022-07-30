@@ -12,6 +12,7 @@
     "lint": "next lint",
     "migrate:dev": "yarn prisma migrate dev",
     "migrate:prod": "yarn prisma migrate deploy",
+    "prod:db:push": "yarn prisma db push",
     "prettier": "prettier --write .",
     "start": "next start",
     "static-checks": "yarn prettier && yarn lint && yarn typecheck",
