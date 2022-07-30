@@ -8,16 +8,17 @@ const AddTeamForm = () => {
 
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault()
+
     try {
       const body = { title }
-      await fetch(`/api/teams/create`, {
+      await fetch(`/api/team`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
       })
       await Router.push('/teams')
     } catch (error) {
-      // console.error(error)
+      console.error(error)
     }
   }
 
