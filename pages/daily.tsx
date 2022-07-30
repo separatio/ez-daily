@@ -43,7 +43,6 @@ const Daily: NextPage = () => {
         sx={{
           fontSize: '5rem',
           textTransform: 'none',
-          fontFamily: 'Montserrat',
           borderRadius: '20px',
         }}
         onClick={() => {
@@ -58,7 +57,6 @@ const Daily: NextPage = () => {
       <Typography
         sx={{
           fontSize: '10rem',
-          fontFamily: 'Montserrat',
           marginTop: '2rem',
           color: 'text.secondary',
         }}

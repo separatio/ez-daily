@@ -12,17 +12,6 @@ const TeamListSubHeader = ({ teamName }: ListSubHeaderProps) => {
       }}
     >
       {teamName}
-      <Tooltip title="Edit Team name">
-        <IconButton>
-          <Edit />
-        </IconButton>
-      </Tooltip>
-
-      <Tooltip title="Edit Team members">
-        <IconButton>
-          <People />
-        </IconButton>
-      </Tooltip>
     </ListSubheader>
   )
 }

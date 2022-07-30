@@ -18,6 +18,15 @@ const theme = createTheme({
       default: '#ffffff',
     },
   },
+  typography: {
+    fontFamily: [
+      'Montserrat',
+      'Roboto',
+      'Helvetica Neue',
+      'Arial',
+      'sans-serif',
+    ].join(','),
+  },
   components: {
     MuiSvgIcon: {
       defaultProps: {
