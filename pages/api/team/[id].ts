@@ -1,7 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { getSession } from 'next-auth/react'
-import { prisma } from '../../../src/lib/prisma'
+import { prisma } from '../../../lib/prisma'
 
+// GET /api/team/:id
 // DELETE /api/team/:id
 export default async function handle(
   req: NextApiRequest,
@@ -15,6 +16,12 @@ export default async function handle(
     switch (req.method) {
       case 'DELETE': {
         const team = await prisma.team.delete({
+          where: { id: Number(teamId) },
+        })
+        res.json(team)
+      }
+      case 'GET': {
+        const team = await prisma.team.findFirst({
           where: { id: Number(teamId) },
         })
         res.json(team)

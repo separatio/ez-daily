@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { prisma } from '../../../src/lib/prisma'
+import { prisma } from '../../lib/prisma'
 import { getSession } from 'next-auth/react'
 
-// POST /api/teams
+// POST /api/team
 export default async function handle(
   req: NextApiRequest,
   res: NextApiResponse

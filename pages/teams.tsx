@@ -1,4 +1,4 @@
-import type { NextPage } from 'next'
+import type { GetServerSideProps, NextPage } from 'next'
 
 import { Grid, Typography } from '@mui/material'
 import TeamList from '../src/components/teams/TeamList'
