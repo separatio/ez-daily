@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import { prisma } from '../../lib/prisma'
 import { getSession } from 'next-auth/react'
 
-// POST /api/team
+// POST /api/teams
 export default async function handle(
   req: NextApiRequest,
   res: NextApiResponse
@@ -16,9 +16,9 @@ export default async function handle(
         include: {
           users: {
             where: {
-              email: session.user.email
-            }
-          }
+              email: session.user.email,
+            },
+          },
         },
       }))
 

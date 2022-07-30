@@ -17,7 +17,7 @@ const AddTeamForm = () => {
       })
       await Router.push('/teams')
     } catch (error) {
-      console.error(error)
+      // console.error(error)
     }
   }
 

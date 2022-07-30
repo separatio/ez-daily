@@ -4,32 +4,20 @@ import { Grid, Typography } from '@mui/material'
 import TeamList from '../src/components/teams/TeamList'
 import { useSession } from 'next-auth/react'
 import AddTeamButton from '../src/components/teams/AddTeamForm'
+import useSWR from 'swr'
+import { Team } from '@prisma/client'
 
 const Teams: NextPage = () => {
-  const { data: session, status } = useSession()
+  const { data: session } = useSession()
 
-  // Code Flow is:
-  // 1. make request and save answer to: teams[]
-  // 2. iterate through teams and display teamName and teamMembers
+  const { data, error } = useSWR('/api/teams')
 
-  //TODO: replace lists with db/gql query
-  const memberList = [
-    'Aleksandr',
-    'Alex',
-    'Andrei',
-    'Denys',
-    'Huy',
-    'Ilya',
-    'Kavitha',
-    'Rafal',
-    'Sergiu',
-    'Timofei',
-  ]
-  const teamList = ['Staff Portal Tango']
-
-  if (status === 'unauthenticated') {
+  if (!session) {
     return <p>Access Denied</p>
   }
+
+  if (error) return <div>Failed to load teams</div>
+  if (!data) return <div>Loading...</div>
 
   return (
     <>
@@ -44,10 +32,10 @@ const Teams: NextPage = () => {
         alignItems="flex-start"
         columnSpacing={2}
       >
-        {teamList.map((teamName) => {
+        {data.map((team: Team) => {
           return (
-            <Grid item key={teamName}>
-              <TeamList teamName={teamName} memberList={memberList} />
+            <Grid item key={team.title}>
+              <TeamList teamName={team.title} memberList={team.members} />
             </Grid>
           )
         })}

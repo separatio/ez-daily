@@ -55,8 +55,8 @@ model VerificationToken {
 }
 
 model Team {
-  id          Int      @id @default(autoincrement())
-  title       String
-  teamMembers String[]
-  users       User[]
+  id      Int      @id @default(autoincrement())
+  title   String
+  members String[]
+  users   User[]
 }

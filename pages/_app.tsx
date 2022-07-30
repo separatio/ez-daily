@@ -23,7 +23,7 @@ const EzDaily = ({
         <SWRConfig
           value={{
             refreshInterval: 3000,
-            fetcher: fetcher
+            fetcher: (resource, init) => fetch(resource, init).then(res => res.json()),
           }}
         >
           <CssBaseline />
