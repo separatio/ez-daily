@@ -22,7 +22,6 @@ const EzDaily = ({
       <ThemeProvider theme={theme}>
         <SWRConfig
           value={{
-            refreshInterval: 3000,
             fetcher: fetcher,
           }}
         >
