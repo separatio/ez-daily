@@ -6,6 +6,8 @@ import CssBaseline from '@mui/material/CssBaseline'
 import Head from 'next/head'
 import { ThemeProvider } from '@mui/material/styles'
 import theme from '../src/theme'
+import { SWRConfig } from 'swr'
+import fetcher from '../lib/fetch'
 
 const EzDaily = ({
   Component,
@@ -18,10 +20,17 @@ const EzDaily = ({
         <title>Ez Daily</title>
       </Head>
       <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <SWRConfig
+          value={{
+            refreshInterval: 3000,
+            fetcher: fetcher,
+          }}
+        >
+          <CssBaseline />
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </SWRConfig>
       </ThemeProvider>
     </SessionProvider>
   )

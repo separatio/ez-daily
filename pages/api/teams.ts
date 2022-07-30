@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { prisma } from '../../../src/lib/prisma'
+import { prisma } from '../../lib/prisma'
 import { getSession } from 'next-auth/react'
 
 // POST /api/teams
@@ -13,8 +13,12 @@ export default async function handle(
     const result =
       session.user?.email &&
       (await prisma.team.findMany({
-        where: {
-          authorEmail: session.user.email,
+        include: {
+          users: {
+            where: {
+              email: session.user.email,
+            },
+          },
         },
       }))
 
