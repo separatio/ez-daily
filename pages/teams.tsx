@@ -8,6 +8,10 @@ import AddTeamButton from '../src/components/teams/AddTeamForm'
 const Teams: NextPage = () => {
   const { data: session, status } = useSession()
 
+  // Code Flow is:
+  // 1. make request and save answer to: teams[]
+  // 2. iterate through teams and display teamName and teamMembers
+
   //TODO: replace lists with db/gql query
   const memberList = [
     'Aleksandr',
