@@ -17,7 +17,7 @@ export default async function handle(
       (await prisma.team.create({
         data: {
           title: title,
-          author: { connect: { email: session.user?.email } },
+          users: { connect: { email: session.user?.email } },
         },
       }))
 

@@ -13,8 +13,12 @@ export default async function handle(
     const result =
       session.user?.email &&
       (await prisma.team.findMany({
-        where: {
-          authorEmail: session.user.email,
+        include: {
+          users: {
+            where: {
+              email: session.user.email
+            }
+          }
         },
       }))
 
