@@ -1,7 +1,30 @@
-import { IconButton, Tooltip, ListSubheader } from '@mui/material'
-import { People, Edit } from '@mui/icons-material'
+import { ListSubheader } from '@mui/material'
+import EditableField from '../EditableField'
+import { mutate } from 'swr'
+import Router from 'next/router'
 
 const TeamListSubHeader = ({ teamName }: ListSubHeaderProps) => {
+  const handleRequest = async (
+    e: React.SyntheticEvent,
+    newTeamName: string
+  ) => {
+    e.preventDefault()
+
+    try {
+      const body = { newTeamName, teamName }
+      await fetch(`/api/team`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      })
+      await Router.push('/teams')
+    } catch (error) {
+      console.error(error)
+    }
+
+    mutate('/api/teams')
+  }
+
   return (
     <ListSubheader
       component="div"
@@ -11,7 +34,7 @@ const TeamListSubHeader = ({ teamName }: ListSubHeaderProps) => {
         color: 'text.primary',
       }}
     >
-      {teamName}
+      <EditableField initialValue={teamName} updateRequest={handleRequest} />
     </ListSubheader>
   )
 }
