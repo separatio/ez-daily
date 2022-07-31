@@ -58,20 +58,21 @@ model VerificationToken {
 }
 
 model Team {
-  id      Int      @id @default(autoincrement())
-  name    String
-  members String[]
-  users   User[]
+  id         Int      @id @default(autoincrement())
+  name       String
+  members    String[]
+  users      User[]
+  owner      Owner    @relation(fields: [ownerEmail], references: [userEmail])
+  ownerEmail String
 
-  owner   Owner @relation(fields: [ownerId], references: [id])
-  ownerId Int
+  @@unique([ownerEmail, name], name: "ownerIdentifier")
 }
 
 model Owner {
-  id     Int    @id @default(autoincrement())
-  user   User   @relation(fields: [userId], references: [id])
-  userId String @unique
-  Team   Team[]
+  id        Int    @id @default(autoincrement())
+  user      User   @relation(fields: [userEmail], references: [email], onDelete: Cascade)
+  userEmail String @unique
+  team      Team[]
 }
 
 enum Role {

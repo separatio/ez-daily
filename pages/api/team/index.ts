@@ -16,14 +16,26 @@ export default async function handle(
       session.user?.email &&
       (await prisma.team.upsert({
         where: {
-          name: teamName,
+          ownerIdentifier: {
+            ownerEmail: session.user?.email,
+            name: teamName,
+          },
         },
         update: {
           name: newTeamName,
         },
         create: {
           name: teamName,
-          users: { connect: { email: session.user?.email } },
+          owner: {
+            connectOrCreate: {
+              where: {
+                userEmail: session.user?.email,
+              },
+              create: {
+                user: { connect: { email: session.user?.email } },
+              },
+            },
+          },
         },
       }))
 
