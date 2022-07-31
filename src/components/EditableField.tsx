@@ -8,7 +8,7 @@ const EditableField = ({ initialValue, updateRequest }: EditableFieldProps) => {
   const handleBlur = (event: React.SyntheticEvent) => {
     setIsFieldFocused(false)
 
-    if(!name){
+    if (!name) {
       setName(initialValue)
       return
     }
