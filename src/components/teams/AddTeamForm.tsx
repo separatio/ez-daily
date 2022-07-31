@@ -10,6 +10,9 @@ const AddTeamForm = () => {
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault()
 
+    if(!teamName)
+      return
+
     try {
       const body = { teamName }
       await fetch(`/api/team`, {
