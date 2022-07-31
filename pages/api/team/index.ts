@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { prisma } from '../../../lib/prisma'
+import { prisma } from '@lib/prisma'
 import { getSession } from 'next-auth/react'
 
 // POST /api/team
@@ -10,13 +10,19 @@ export default async function handle(
   const session = await getSession({ req })
 
   if (session) {
-    const { title } = req.body
+    const { newTeamName, teamName } = req.body
 
     const result =
       session.user?.email &&
-      (await prisma.team.create({
-        data: {
-          title: title,
+      (await prisma.team.upsert({
+        where: {
+          name: teamName,
+        },
+        update: {
+          name: newTeamName,
+        },
+        create: {
+          name: teamName,
           users: { connect: { email: session.user?.email } },
         },
       }))

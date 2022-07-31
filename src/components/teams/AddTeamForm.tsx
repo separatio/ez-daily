@@ -5,15 +5,15 @@ import { useState } from 'react'
 import { mutate } from 'swr'
 
 const AddTeamForm = () => {
-  const [title, setTitle] = useState('')
+  const [teamName, setTeamName] = useState('')
 
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault()
 
     try {
-      const body = { title }
+      const body = { teamName }
       await fetch(`/api/team`, {
-        method: 'POST',
+        method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
       })
@@ -35,7 +35,7 @@ const AddTeamForm = () => {
         <InputLabel htmlFor="my-input">+ Add Team</InputLabel>
         <Input
           id="add-team"
-          onChange={(e) => setTitle(e.target.value)}
+          onChange={(e) => setTeamName(e.target.value)}
           sx={{ color: 'black' }}
         />
       </FormControl>

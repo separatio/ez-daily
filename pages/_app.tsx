@@ -7,7 +7,7 @@ import Head from 'next/head'
 import { ThemeProvider } from '@mui/material/styles'
 import theme from '../src/theme'
 import { SWRConfig } from 'swr'
-import fetcher from '../lib/fetch'
+import fetcher from '@lib/fetch'
 
 const EzDaily = ({
   Component,

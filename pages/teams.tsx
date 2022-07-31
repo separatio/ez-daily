@@ -21,7 +21,7 @@ const Teams: NextPage = () => {
 
   return (
     <>
-      <Typography variant="h2" align="center">
+      <Typography variant="h2" align="center" color="text.secondary">
         {'Teams'}
       </Typography>
 
@@ -34,8 +34,8 @@ const Teams: NextPage = () => {
       >
         {data.map((team: Team) => {
           return (
-            <Grid item key={team.title}>
-              <TeamList teamName={team.title} memberList={team.members} />
+            <Grid item key={team.name}>
+              <TeamList teamName={team.name} memberList={team.members} />
             </Grid>
           )
         })}
