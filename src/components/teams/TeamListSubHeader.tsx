@@ -32,6 +32,7 @@ const TeamListSubHeader = ({ teamName }: ListSubHeaderProps) => {
       sx={{
         backgroundColor: 'secondary.main',
         color: 'text.primary',
+        padding: '0',
       }}
     >
       <EditableField initialValue={teamName} updateRequest={handleRequest} />
